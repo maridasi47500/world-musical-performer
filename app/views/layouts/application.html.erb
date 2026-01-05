@@ -9,30 +9,26 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+<style>
+
+.allclips {
+	height: 300px;
+    width:100%;
+	text-align: center;
+	padding: 100px;
+}
+div.sub, iframe {
+	width: 467px;
+	height: 265px;
+	margin: 0 auto;
+}
+
+</style>
   </head>
 
   <body>
     <%= yield %>
-  <header>
-    <nav>
-      <a href="#">Gmail</a>
-      <a href="#">Images</a>
-    </nav>
-  </header>
-  <main>
-    <img src="google-logo.png" alt="Google Logo" class="logo">
-    <div class="search-bar">
-      <input type="text" placeholder="Search Google or type URL">
-      <button>Google Search</button>
-      <button>I'm Feeling Lucky</button>
-    </div>
-  </main>
-  <footer>
-    <p>Google offered in:</p>
-    <a href="#">Français</a>
-    <a href="#">Español</a>
-  </footer>
 </body>
 </html>
 

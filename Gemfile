@@ -3,8 +3,12 @@ source "https://rubygems.org"
 ruby "3.3.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem "certifi"
 gem "rails", "~> 7.1.5", ">= 7.1.5.1"
 gem 'yt'
+gem 'video_thumb'
+gem "kaminari"
+gem "mechanize"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"

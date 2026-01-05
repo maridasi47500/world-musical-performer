@@ -1,22 +1,30 @@
   <header>
     <div class="search-bar">
-      <input type="text" placeholder="Search Google">
-      <button>Search</button>
-      <button>chercher des videos</button>
-      <button>chercher des partitions</button>
+  <form action="/home/search" method="post">
+<div>
+    <img src="google-logo.png" alt="Google Logo" class="logo">
+</div>
+<div>
+    <input type="checkbox" name="web" id="ontheweb" checked value="1" />
+</div>
+    <div class="search-bar">
+      <input type="text" value="<%=params[:composer]%>" name="composer" placeholder="Search composer/ARTIST">
+ <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
+<label for="searchscores">
+chercher scores
+      <input type="radio" name="mysearch" value="scores" id="searchscores" />
+</label>
+<label for="searchvideo">
+chercher 1 video
+      <input type="radio" name="mysearch" value="video" id="searchvideo" />
+</label>
+      <input type="submit" name="ok3" value="search" />
+    </div>
+  </form>
+
     </div>
   </header>
   <main>
-<%=@results%>
-    <div class="result">
-      <h3><a href="#">Result Title</a></h3>
-      <p>Brief description of the result goes here...</p>
-      <span>www.example.com</span>
-    </div>
-    <div class="result">
-      <h3><a href="#">Another Result Title</a></h3>
-      <p>Another brief description...</p>
-      <span>www.anotherexample.com</span>
-    </div>
+<%=@results.html_safe%>
   </main>
 

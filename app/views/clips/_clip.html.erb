@@ -1,17 +1,19 @@
 <div id="<%= dom_id clip %>">
-  <p>
-    <strong>Title:</strong>
-    <%= clip.title %>
-  </p>
+<div class="allclips">
+<div class="sub">
+
 
   <p>
-    <strong>Link:</strong>
-    <%= clip.link %>
+    <%= clip.title %>
   </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%=clip.link%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+
 
   <p>
     <strong>Artist:</strong>
-    <%= clip.artist_id %>
+    <%= clip.artists.map(&:name).to_sentence %>
   </p>
 
   <p>

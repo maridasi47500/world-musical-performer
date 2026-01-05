@@ -65,6 +65,6 @@ class ClipsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def clip_params
-      params.require(:clip).permit(:title, :link, :artist_id, :description, :sortie)
+      params.require(:clip).permit(:titre, :lienvid, :title, :link, :artist_id, :description, :sortie)
     end
 end
