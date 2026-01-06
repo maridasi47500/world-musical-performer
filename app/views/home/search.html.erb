@@ -12,16 +12,16 @@
  <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
 <label for="searchscores">
 chercher scores
-      <input type="radio" name="mysearch" value="scores" id="searchscores" />
+      <input type="radio" name="mysearch" value="scores" id="searchscores" <%=params[mysearch] == "scores" ? "checked=\"checked\"" : ""%> />
 </label>
 <label for="searchpic">
 chercher 1 image
-      <input type="radio" name="mysearch" value="pic" id="searchpic" />
+      <input type="radio" name="mysearch" value="pic" id="searchpic" <%=params[mysearch] == "pic" ? "checked=\"checked\"" : ""%> />
 </label>
 
 <label for="searchvideo">
 chercher 1 video
-      <input type="radio" name="mysearch" value="video" id="searchvideo" />
+      <input type="radio" name="mysearch" value="video" id="searchvideo" <%=params[mysearch] == "video" ? "checked=\"checked\"" : ""%> />
 </label>
       <input type="submit" name="ok3" value="search" />
     </div>
