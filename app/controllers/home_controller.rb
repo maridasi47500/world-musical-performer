@@ -7,7 +7,9 @@ class HomeController < ApplicationController
     if params[:mysearch] == "video"
     @results=`ruby searchlinkbing.rb "#{params[:composer]}" "#{params[:q]}" `
     elsif params[:mysearch] == "scores"
-    @results=`ruby searchlinkbing.rb "#{params[:q]}" `
+    @results=`ruby scorebing.rb "#{params[:composer]}" "#{params[:q]}" `
+    elsif params[:mysearch] == "pic"
+    @results=`ruby picbing.rb "#{params[:composer]}" "#{params[:q]}" `
      end
   end
 end

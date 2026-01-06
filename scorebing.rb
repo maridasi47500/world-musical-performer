@@ -42,30 +42,34 @@ def search_bing(song, artist)
       @driver.navigate.to url
       doc1 = Nokogiri::HTML(@driver.page_source)
       wait.until { @driver.find_element(:id=>"firstHeading") }
-      song.downcase.split(" ").each do |wow|
-          p wow.split('').map{|h|"[#{h.downcase}#{h.upcase}]"}.join('')
-          p "$('a').toArray().filter((x) => (new RegExp('(#{wow.split('').map{|h|"[#{h.downcase}#{h.upcase}]"}.join('')})', 'i')).test(x.href)).map(x=>window.open(x))"
-          @driver.execute_script("$('a').toArray().filter((x) => (new RegExp('(#{wow.split("").map{|h|"[#{h.downcase}#{h.upcase}]"}.join("")})', 'i')).test(x.href)).map(x=>window.open(x))")
-          sleep 0.5
+      @driver.find_elements(:tag_name, "a").each do |mylink|
+          hello=false
+          song.downcase.split(" ").each do |wow|
+              #p mylink.attribute("href")
+              next if mylink.attribute("href").nil?
+              if mylink.attribute("href").scan(/#{wow.split('').map{|h|"[#{h.downcase}#{h.upcase}]"}.join('')}/).length > 0
+                  hello=true
+
+              end
+              #p "$('a').toArray().filter((x) => (new RegExp('(#{wow.split('').map{|h|"[#{h.downcase}#{h.upcase}]"}.join('')})', 'i')).test(x.href)).map(x=>window.open(x))"
+              #@driver.execute_script("$('a').toArray().filter((x) => (new RegExp('(#{wow.split("").map{|h|"[#{h.downcase}#{h.upcase}]"}.join("")})', 'i')).test(x.href)).map(x=>window.open(x))")
+              #sleep 0.5
+          end
+          if hello == true
+              inner_html = "<a href=\"#{mylink.attribute("href")}\">#{mylink.text}</a>"
+              results << {
+                title: mylink.text,
+                url: mylink.attribute("href"),
+                inner_html: inner_html
+              }
+          end
       end
 
       #puts a_tag
       p "==========="
-    end
-    original_window = @driver.window_handle
-    @driver.window_handles.each do |handle|
-    if handle != original_window
-        @driver.switch_to.window handle
-    end
-    p handle
 
-    # Form the desired output format
-    inner_html = "<a href=\"#{handle.url}\">#{handle.title}</a>"
-    results << {
-      title: handle.title,
-      url: handle.url,
-      inner_html: ""
-    }
+
+
     end
   end
   
@@ -74,8 +78,8 @@ def search_bing(song, artist)
     puts "<p>Title: #{result[:title]}</p>"
     puts "<p>URL: #{result[:url]}</p>"
 
-    if result[:url].include?("?v=")
-      puts "<p><a href=\"/ajouterscore.php?lien=#{result[:url].split("v=")[1]}&titre=#{result[:title].gsub("(","").gsub(")","").gsub("#","").gsub(" - YouTube","").gsub(" ","%20")}\">ajouter à mes vidéos</a></p>"
+    if result[:url]
+      puts "<p><a href=\"/ajouterscore.php?lien=#{result[:url].split("v=")[1]}&titre=#{result[:title].gsub("(","").gsub(")","").gsub("#","").gsub(" - YouTube","").gsub(" ","%20")}\">ajouter à mes partitions</a></p>"
     end
     puts "<br>"
     puts "-" * 40
@@ -107,5 +111,5 @@ rescue => e
   p song[:title]
 end
 
-#@driver.quit
+@driver.quit
 

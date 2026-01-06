@@ -1308,3 +1308,187 @@ Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 859)
 ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
   
 app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/" for 127.0.0.1 at 2026-01-05 23:13:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 910)
+Completed 200 OK in 94ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 8593)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-05 23:13:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-05 23:13:02 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:13:17 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 488)
+Completed 200 OK in 9186ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1010)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:13:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:13:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:15:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.5ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2031)
+Completed 200 OK in 453ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 6149)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:15:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:15:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:15:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 2047)
+Completed 200 OK in 13386ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 6193)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:15:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:15:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:17:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2032)
+Completed 200 OK in 11893ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 6176)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:17:26 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:17:26 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:19:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.8ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2029)
+Completed 200 OK in 11944ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 6173)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:19:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:19:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:20:03 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 335)
+Completed 200 OK in 12015ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 615)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:20:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:20:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:23:22 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.4ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 317)
+Completed 200 OK in 23137ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 627)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:23:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:23:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:25:15 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 308)
+Completed 200 OK in 27736ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 628)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:25:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:25:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-05 23:26:17 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 332)
+Completed 200 OK in 29159ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 656)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-05 23:26:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:26:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
