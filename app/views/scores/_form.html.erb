@@ -1,0 +1,41 @@
+<%= form_with(model: score) do |form| %>
+  <% if score.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+        <% score.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title, value: params[:titre] %>
+  </div>
+
+  <div>
+    <%= form.label :composer, style: "display: block" %>
+    <%= form.text_field :composer, value: params[:composer] %>
+  </div>
+
+  <div>
+    <%= form.label :musicalinstrument_id, style: "display: block" %>
+    <%= form.select :musicalinstrument_id, Musicalinstrument.all.collect{|h|[h.name, h.id]} %>
+  </div>
+
+  <div>
+    <%= form.label :link, style: "display: block" %>
+    <%= form.text_field :link, value: params[:lien] %>
+  </div>
+  <div>
+    <%= form.label :scores, style: "display: block", hidden: true %>
+    <%= form.hidden_field :scores %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

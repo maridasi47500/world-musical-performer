@@ -79,7 +79,7 @@ def search_bing(song, artist)
     puts "<p>URL: #{result[:url]}</p>"
 
     if result[:url]
-      puts "<p><a href=\"/ajouterscore.php?lien=#{result[:url].split("v=")[1]}&titre=#{result[:title].gsub("(","").gsub(")","").gsub("#","").gsub(" - YouTube","").gsub(" ","%20")}\">ajouter à mes partitions</a></p>"
+      puts "<p><a href=\"/ajouterscore.php?composer=#{artist}&lien=#{result[:url]}&titre=#{result[:title].gsub("(","").gsub(")","").gsub("#","").gsub(" - YouTube","").gsub(" ","%20")}\">ajouter à mes partitions</a></p>"
     end
     puts "<br>"
     puts "-" * 40
@@ -99,10 +99,15 @@ songs = [
   { title: ARGV[1], artist: ARGV[0] }
 ]
 
-p songs
+
 
 # Search Bing for each song
 songs.each do |song|
+  p "<p>"
+  p "Artist\/composer's name : " + song[:artist]
+  p "</p><p>"
+  p "title : " + song[:title]
+  p "</p>"
   results = search_bing(song[:title], song[:artist])
 rescue => e
   p "Ouille"

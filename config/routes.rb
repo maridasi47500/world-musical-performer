@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  resources :scores
+  resources :pics
   resources :artists
   resources :clips
   
+  get 'ajouterscore.php', to: "scores#new"
+  get 'ajouterpic.php', to: "pics#new"
   get 'ajouter.php', to: "clips#new"
   get 'home/index'
   post 'home/search'

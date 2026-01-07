@@ -1,0 +1,23 @@
+<div id="<%= dom_id score %>">
+  <p>
+    <strong>Title:</strong>
+    <%= score.title %>
+  </p>
+
+  <p>
+    <strong>Composer:</strong>
+    <%= score.composer %>
+  </p>
+
+  <p>
+    <strong>Musical instrument:</strong>
+    <%= score.musicalinstrument.name %>
+    <%= score.musicalinstrument.description %>
+  </p>
+
+  <p>
+    <strong>Scores:</strong>
+    <%= score.scores.html_safe %>
+  </p>
+
+</div>

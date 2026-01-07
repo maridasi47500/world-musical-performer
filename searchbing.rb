@@ -83,10 +83,16 @@ songs = [
   { title: ARGV[0] }
 ]
 
-p songs
+
+
 
 # Search Bing for each song
 songs.each do |song|
+  p "<p>"
+  p "Artist/composer's name : " + song[:artist]
+  p "</p><p>"
+  p "title : " + song[:title]
+  p "</p>"
   results = search_bing(song[:title])
 rescue => e
   p "Ouille"

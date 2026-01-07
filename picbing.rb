@@ -35,6 +35,7 @@ def search_bing(song, artist)
 
     url = a_tag['src']
     next if url.to_s.strip == ""
+    next if !url.to_s.strip.include?("bing.com")
     title = artist+" "+song
     
     link_element = li
@@ -56,7 +57,7 @@ def search_bing(song, artist)
     puts "<p>#{result[:inner_html]}</p>"
 
     if result[:url]
-      puts "<p><a href=\"/ajouterpic.php?lien=#{result[:url].split("v=")[1]}&titre=#{result[:title].gsub("(","").gsub(")","").gsub("#","").gsub(" - YouTube","").gsub(" ","%20")}\">ajouter à mes images</a></p>"
+      puts "<p><a href=\"/ajouterpic.php?composer=#{artist}&lien=#{result[:url]}&titre=#{result[:title].gsub("(","").gsub(")","").gsub("#","").gsub(" - YouTube","").gsub(" ","%20")}\">ajouter à mes images</a></p>"
     end
     puts "<br>"
     puts "-" * 40
@@ -76,10 +77,16 @@ songs = [
   { title: ARGV[1], artist: ARGV[0] }
 ]
 
-p songs
+
+
 
 # Search Bing for each song
 songs.each do |song|
+  p "<p>"
+  p "Artist/composer's name : " + song[:artist]
+  p "</p><p>"
+  p "title : " + song[:title]
+  p "</p>"
   results = search_bing(song[:title], song[:artist])
 rescue => e
   p "Ouille"

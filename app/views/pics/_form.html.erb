@@ -1,0 +1,34 @@
+<%= form_with(model: pic) do |form| %>
+  <% if pic.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pic.errors.count, "error") %> prohibited this pic from being saved:</h2>
+
+      <ul>
+        <% pic.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title, value: params[:titre] %>
+  </div>
+
+  <div>
+    <%= form.label :composer, style: "display: block" %>
+    <%= form.text_field :composer, value: params[:composer] %>
+  </div>
+
+  <div>
+<%mysize=3%>
+    <%= form.label :pic, style: "display: block", hidden: true %>
+    <%= form.hidden_field :pic, value: "#{params[:lien].split("?")[0]}?w=#{params[:lien].split("w=")[1].to_i * mysize}&h=#{params[:h].to_i * mysize}&c=#{params[:c]}&r=#{params[:r]}&o=#{params[:o]}&pid=#{params[:pid]}&rm=#{params[:rm]}" %>
+  </div>
+
+<img src="<%=params[:lien].split("?")[0]%>?w=<%=params[:lien].split("w=")[1].to_i * mysize%>&h=<%=params[:h].to_i * mysize%>&c=<%=params[:c]%>&r=<%=params[:r]%>&o=<%=params[:o]%>&pid=<%=params[:pid]%>&rm=<%=params[:rm]%>"/>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

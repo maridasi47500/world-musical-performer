@@ -1492,3 +1492,1319 @@ Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-05 23:26:46 -0300
   
 ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
   
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:35:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 49.2ms | Allocations: 2265)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 2388)
+Completed 500 Internal Server Error in 20945ms (ActiveRecord: 0.0ms | Allocations: 13786)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mysearch' for an instance of #<Class:0x00007eea7678f340>):
+    12:  <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
+    13: <label for="searchscores">
+    14: chercher scores
+    15:       <input type="radio" name="mysearch" value="scores" id="searchscores" <%=params[mysearch] == "scores" ? "checked=\"checked\"" : ""%> />
+    16: </label>
+    17: <label for="searchpic">
+    18: chercher 1 image
+  
+app/views/home/search.html.erb:15
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:36:17 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.9ms | Allocations: 999)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1086)
+Completed 500 Internal Server Error in 9939ms (ActiveRecord: 0.0ms | Allocations: 1355)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mysearch' for an instance of #<Class:0x00007eea7678f340>):
+    12:  <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
+    13: <label for="searchscores">
+    14: chercher scores
+    15:       <input type="radio" name="mysearch" value="scores" id="searchscores" <%=params[mysearch] == "scores" ? "checked=\"checked\"" : ""%> />
+    16: </label>
+    17: <label for="searchpic">
+    18: chercher 1 image
+  
+app/views/home/search.html.erb:15
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:36:32 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1084)
+Completed 500 Internal Server Error in 8156ms (ActiveRecord: 0.0ms | Allocations: 1350)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mysearch' for an instance of #<Class:0x00007eea7678f340>):
+    12:  <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
+    13: <label for="searchscores">
+    14: chercher scores
+    15:       <input type="radio" name="mysearch" value="scores" id="searchscores" <%=params[mysearch] == "scores" ? "checked=\"checked\"" : ""%> />
+    16: </label>
+    17: <label for="searchpic">
+    18: chercher 1 image
+  
+app/views/home/search.html.erb:15
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:36:47 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1084)
+Completed 500 Internal Server Error in 41873ms (ActiveRecord: 0.0ms | Allocations: 1433)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mysearch' for an instance of #<Class:0x00007eea7678f340>):
+    12:  <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
+    13: <label for="searchscores">
+    14: chercher scores
+    15:       <input type="radio" name="mysearch" value="scores" id="searchscores" <%=params[mysearch] == "scores" ? "checked=\"checked\"" : ""%> />
+    16: </label>
+    17: <label for="searchpic">
+    18: chercher 1 image
+  
+app/views/home/search.html.erb:15
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:37:37 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1084)
+Completed 500 Internal Server Error in 12453ms (ActiveRecord: 0.0ms | Allocations: 1373)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mysearch' for an instance of #<Class:0x00007eea7678f340>):
+    12:  <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
+    13: <label for="searchscores">
+    14: chercher scores
+    15:       <input type="radio" name="mysearch" value="scores" id="searchscores" <%=params[mysearch] == "scores" ? "checked=\"checked\"" : ""%> />
+    16: </label>
+    17: <label for="searchpic">
+    18: chercher 1 image
+  
+app/views/home/search.html.erb:15
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:37:57 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 996)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1083)
+Completed 500 Internal Server Error in 6129ms (ActiveRecord: 0.0ms | Allocations: 1338)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mysearch' for an instance of #<Class:0x00007eea7678f340>):
+    12:  <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
+    13: <label for="searchscores">
+    14: chercher scores
+    15:       <input type="radio" name="mysearch" value="scores" id="searchscores" <%=params[mysearch] == "scores" ? "checked=\"checked\"" : ""%> />
+    16: </label>
+    17: <label for="searchpic">
+    18: chercher 1 image
+  
+app/views/home/search.html.erb:15
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:38:12 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 996)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1083)
+Completed 500 Internal Server Error in 29601ms (ActiveRecord: 0.0ms | Allocations: 1397)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mysearch' for an instance of #<Class:0x00007eea7678f340>):
+    12:  <input type="text" name="q" value="<%=params[:q]%>" placeholder="Search song or score Title">
+    13: <label for="searchscores">
+    14: chercher scores
+    15:       <input type="radio" name="mysearch" value="scores" id="searchscores" <%=params[mysearch] == "scores" ? "checked=\"checked\"" : ""%> />
+    16: </label>
+    17: <label for="searchpic">
+    18: chercher 1 image
+  
+app/views/home/search.html.erb:15
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:39:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2096)
+Completed 200 OK in 15905ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 6250)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 22:39:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 22:39:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:41:25 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"violin concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 335)
+Completed 200 OK in 32140ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 22:41:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 22:41:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:42:16 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"violin concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 340)
+Completed 200 OK in 5994ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 22:42:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 22:42:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:42:28 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"violin concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.5ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 323)
+Completed 200 OK in 12452ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 605)
+
+
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:43:02 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"violin concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 323)
+Completed 200 OK in 12599ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 596)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 22:43:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 22:43:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouterpic.php?lien=&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 22:44:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/ajouterpic.php"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:46:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"violin concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.3ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2105)
+Completed 200 OK in 12186ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 6249)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 22:46:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 22:46:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 22:47:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"viotti", "q"=>"violin concerto 23", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2090)
+Completed 200 OK in 12255ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 6234)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 22:47:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 22:47:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 22:47:21 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/ajouterpic.php"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 22:50:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20260107015016_create_pics.rb
+
+
+):
+  
+activerecord (7.1.5.1) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.5.1) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.5.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.5.1) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.5.1) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.5.1) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.1) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.13) lib/rack/method_override.rb:28:in `call'
+rack (3.1.13) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.13) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.1) lib/rails/engine.rb:536:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2026-01-06 22:50:53 -0300
+  [1m[36mActiveRecord::InternalMetadata Load (33.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePics (20260107015016)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "pics" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "composer" varchar, "pic" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260107015016') RETURNING "version"[0m
+  [1m[36mTRANSACTION (96.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ajouterpic.php" for 127.0.0.1 at 2026-01-06 22:50:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 15.6ms | Allocations: 3621)
+  Rendered pics/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 3925)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4266)
+Completed 200 OK in 97ms (Views: 18.1ms | ActiveRecord: 1.5ms | Allocations: 18447)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 22:50:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 22:51:01 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"lien"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203", "h"=>"263", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"viotti violin concerto 23"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 3.5ms | Allocations: 879)
+  Rendered pics/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 959)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1101)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 1361)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 22:51:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 22:51:03 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"lien"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203", "h"=>"263", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"viotti violin concerto 23"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 2.4ms | Allocations: 870)
+  Rendered pics/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 950)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1092)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1348)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 22:51:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 22:54:08 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"lien"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203", "h"=>"263", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"viotti violin concerto 23"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 1.9ms | Allocations: 1467)
+  Rendered pics/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1746)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2070)
+Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 1.5ms | Allocations: 6793)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 22:54:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 22:56:41 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"lien"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203", "h"=>"263", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"viotti violin concerto 23"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 20.8ms | Allocations: 1663)
+  Rendered pics/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 1942)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2266)
+Completed 200 OK in 30ms (Views: 23.5ms | ActiveRecord: 1.8ms | Allocations: 6986)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 22:56:41 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 22:57:24 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"lien"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203", "h"=>"263", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"viotti violin concerto 23"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 3.2ms | Allocations: 914)
+  Rendered pics/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 994)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1136)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 1395)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 22:57:24 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 23:09:29 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"lien"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=203", "h"=>"263", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"viotti violin concerto 23"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 31.3ms | Allocations: 1614)
+  Rendered pics/new.html.erb within layouts/application (Duration: 32.0ms | Allocations: 1893)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 2217)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 6389)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:09:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/pics" for 127.0.0.1 at 2026-01-06 23:09:32 -0300
+Processing by PicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pic"=>{"title"=>"viotti violin concerto 23", "composer"=>"viotti", "pic"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=1015&h=1315&c=7&r=0&o=7&pid=1.7&rm=3"}, "commit"=>"Create Pic"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mPic Create (4.3ms)[0m  [1m[32mINSERT INTO "pics" ("title", "composer", "pic", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "viotti violin concerto 23"], ["composer", "viotti"], ["pic", "WIDORUES"], ["created_at", "2026-01-07 02:09:32.849260"], ["updated_at", "2026-01-07 02:09:32.849260"]]
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (103.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pics/1
+Completed 302 Found in 119ms (ActiveRecord: 108.7ms | Allocations: 3465)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2026-01-06 23:09:32 -0300
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+  Rendering layout layouts/application.html.erb
+  Rendering pics/show.html.erb within layouts/application
+  Rendered pics/_pic.html.erb (Duration: 0.8ms | Allocations: 203)
+  Rendered pics/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1156)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1298)
+Completed 200 OK in 40ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 6557)
+
+
+Started GET "/pics/styles.css" for 127.0.0.1 at 2026-01-06 23:09:33 -0300
+Processing by PicsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 852)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=styles):
+  
+app/controllers/pics_controller.rb:63:in `set_pic'
+Started POST "/pics" for 127.0.0.1 at 2026-01-06 23:09:56 -0300
+Processing by PicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pic"=>{"title"=>"viotti violin concerto 23", "composer"=>"viotti", "pic"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=1015&h=1315&c=7&r=0&o=7&pid=1.7&rm=3"}, "commit"=>"Create Pic"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mPic Create (0.8ms)[0m  [1m[32mINSERT INTO "pics" ("title", "composer", "pic", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "viotti violin concerto 23"], ["composer", "viotti"], ["pic", "ONPAJGOJ.png"], ["created_at", "2026-01-07 02:09:56.583928"], ["updated_at", "2026-01-07 02:09:56.583928"]]
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (48.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pics/2
+Completed 302 Found in 60ms (ActiveRecord: 50.1ms | Allocations: 5949)
+
+
+Started GET "/pics/2" for 127.0.0.1 at 2026-01-06 23:09:56 -0300
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+  Rendering layout layouts/application.html.erb
+  Rendering pics/show.html.erb within layouts/application
+  Rendered pics/_pic.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered pics/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1285)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 3233)
+
+
+Started GET "/pics/styles.css" for 127.0.0.1 at 2026-01-06 23:09:56 -0300
+Processing by PicsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 830)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=styles):
+  
+app/controllers/pics_controller.rb:63:in `set_pic'
+Started GET "/pics/2" for 127.0.0.1 at 2026-01-06 23:10:24 -0300
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+  Rendering layout layouts/application.html.erb
+  Rendering pics/show.html.erb within layouts/application
+  Rendered pics/_pic.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered pics/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 976)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1300)
+Completed 200 OK in 10ms (Views: 3.1ms | ActiveRecord: 1.5ms | Allocations: 7032)
+
+
+Started GET "/uploads/ONPAJGOJ.png" for 127.0.0.1 at 2026-01-06 23:10:24 -0300
+Started GET "/pics/styles.css" for 127.0.0.1 at 2026-01-06 23:10:24 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/ONPAJGOJ.png"):
+  
+Processing by PicsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.1ms | Allocations: 4711)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=styles):
+  
+app/controllers/pics_controller.rb:63:in `set_pic'
+Started GET "/uploads/ONPAJGOJ.png" for 127.0.0.1 at 2026-01-06 23:10:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/ONPAJGOJ.png"):
+  
+Started GET "/uploads/ONPAJGOJ.png" for 127.0.0.1 at 2026-01-06 23:10:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/ONPAJGOJ.png"):
+  
+Started POST "/pics" for 127.0.0.1 at 2026-01-06 23:10:48 -0300
+Processing by PicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pic"=>{"title"=>"viotti violin concerto 23", "composer"=>"viotti", "pic"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=1015&h=1315&c=7&r=0&o=7&pid=1.7&rm=3"}, "commit"=>"Create Pic"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mPic Create (2.0ms)[0m  [1m[32mINSERT INTO "pics" ("title", "composer", "pic", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "viotti violin concerto 23"], ["composer", "viotti"], ["pic", "FKFAVWNQ.png"], ["created_at", "2026-01-07 02:11:03.918171"], ["updated_at", "2026-01-07 02:11:03.918171"]]
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (38.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pics/3
+Completed 302 Found in 15406ms (ActiveRecord: 41.0ms | Allocations: 2083)
+
+
+Started GET "/pics/3" for 127.0.0.1 at 2026-01-06 23:11:03 -0300
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+  Rendering layout layouts/application.html.erb
+  Rendering pics/show.html.erb within layouts/application
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered pics/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 433)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 575)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1162)
+
+
+Started GET "/pics/styles.css" for 127.0.0.1 at 2026-01-06 23:11:04 -0300
+Processing by PicsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 823)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=styles):
+  
+app/controllers/pics_controller.rb:63:in `set_pic'
+Started POST "/pics" for 127.0.0.1 at 2026-01-06 23:12:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pic"=>{"title"=>"viotti violin concerto 23", "composer"=>"viotti", "pic"=>"https://th.bing.com/th/id/OIP.G60qSckbYPan4ke869rClwHaJl?w=1015&h=1315&c=7&r=0&o=7&pid=1.7&rm=3"}, "commit"=>"Create Pic"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mPic Create (1.0ms)[0m  [1m[32mINSERT INTO "pics" ("title", "composer", "pic", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "viotti violin concerto 23"], ["composer", "viotti"], ["pic", "UGIAAHVM.svg"], ["created_at", "2026-01-07 02:12:35.622897"], ["updated_at", "2026-01-07 02:12:35.622897"]]
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (51.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pics/4
+Completed 302 Found in 563ms (ActiveRecord: 54.0ms | Allocations: 16410)
+
+
+Started GET "/pics/4" for 127.0.0.1 at 2026-01-06 23:12:35 -0300
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+  Rendering layout layouts/application.html.erb
+  Rendering pics/show.html.erb within layouts/application
+  Rendered pics/_pic.html.erb (Duration: 0.7ms | Allocations: 220)
+  Rendered pics/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1333)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1703)
+Completed 200 OK in 27ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 8216)
+
+
+Started GET "/pics/styles.css" for 127.0.0.1 at 2026-01-06 23:12:35 -0300
+Processing by PicsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 871)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=styles):
+  
+app/controllers/pics_controller.rb:63:in `set_pic'
+Started GET "/pics" for 127.0.0.1 at 2026-01-06 23:13:21 -0300
+Processing by PicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics"[0m
+  ↳ app/views/pics/index.html.erb:6
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1366)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 1509)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 1849)
+
+
+Started GET "/uploads/WIDORUES" for 127.0.0.1 at 2026-01-06 23:13:21 -0300
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:13:21 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/WIDORUES"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/uploads/ONPAJGOJ.png" for 127.0.0.1 at 2026-01-06 23:13:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/ONPAJGOJ.png"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.xoIp6Y6Dj8CzRuKnZaU5-gHaJl?w=203&h=263&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 23:14:56 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"lien"=>"https://th.bing.com/th/id/OIP.xoIp6Y6Dj8CzRuKnZaU5-gHaJl?w=203", "h"=>"263", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"viotti violin concerto 23"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 2.9ms | Allocations: 2248)
+  Rendered pics/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2531)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2855)
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 1.3ms | Allocations: 7597)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:14:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterpic.php?lien=https://th.bing.com/th/id/OIP.1ebIBfObYM93sfROYyFIKgHaJy?w=203&h=268&c=7&r=0&o=7&pid=1.7&rm=3&titre=viotti%20violin%20concerto%2023" for 127.0.0.1 at 2026-01-06 23:16:46 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"lien"=>"https://th.bing.com/th/id/OIP.1ebIBfObYM93sfROYyFIKgHaJy?w=203", "h"=>"268", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"viotti violin concerto 23"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 1.9ms | Allocations: 1489)
+  Rendered pics/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1768)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2092)
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 1.3ms | Allocations: 6817)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:16:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/pics" for 127.0.0.1 at 2026-01-06 23:18:24 -0300
+Processing by PicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pic"=>{"title"=>"viotti violin concerto 23", "composer"=>"viotti", "pic"=>"https://th.bing.com/th/id/OIP.1ebIBfObYM93sfROYyFIKgHaJy?w=609&h=804&c=7&r=0&o=7&pid=1.7&rm=3"}, "commit"=>"Create Pic"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mPic Create (2.0ms)[0m  [1m[32mINSERT INTO "pics" ("title", "composer", "pic", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "viotti violin concerto 23"], ["composer", "viotti"], ["pic", "SRPWOQKY.svg"], ["created_at", "2026-01-07 02:18:25.336172"], ["updated_at", "2026-01-07 02:18:25.336172"]]
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (47.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pics/5
+Completed 302 Found in 674ms (ActiveRecord: 50.6ms | Allocations: 5907)
+
+
+Started GET "/pics/5" for 127.0.0.1 at 2026-01-06 23:18:25 -0300
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+  Rendering layout layouts/application.html.erb
+  Rendering pics/show.html.erb within layouts/application
+  Rendered pics/_pic.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered pics/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 945)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1269)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 3216)
+
+
+Started GET "/pics/styles.css" for 127.0.0.1 at 2026-01-06 23:18:25 -0300
+Processing by PicsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 832)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=styles):
+  
+app/controllers/pics_controller.rb:63:in `set_pic'
+Started GET "/pics" for 127.0.0.1 at 2026-01-06 23:18:30 -0300
+Processing by PicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics"[0m
+  ↳ app/views/pics/index.html.erb:6
+  Rendered pics/_pic.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1470)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1613)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 1954)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:18:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/uploads/ONPAJGOJ.png" for 127.0.0.1 at 2026-01-06 23:18:30 -0300
+Started GET "/uploads/WIDORUES" for 127.0.0.1 at 2026-01-06 23:18:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/ONPAJGOJ.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/WIDORUES"):
+  
+Started GET "/pics" for 127.0.0.1 at 2026-01-06 23:19:13 -0300
+Processing by PicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics"[0m
+  ↳ app/views/pics/index.html.erb:6
+  Rendered pics/_pic.html.erb (Duration: 0.5ms | Allocations: 196)
+  Rendered pics/_pic.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered pics/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4985)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5360)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 1.7ms | Allocations: 7015)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:19:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/uploads/ONPAJGOJ.png" for 127.0.0.1 at 2026-01-06 23:19:13 -0300
+Started GET "/uploads/WIDORUES" for 127.0.0.1 at 2026-01-06 23:19:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/WIDORUES"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/ONPAJGOJ.png"):
+  
+Started GET "/" for 127.0.0.1 at 2026-01-06 23:19:15 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 497)
+Completed 200 OK in 37ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 988)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:19:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-06 23:19:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:23:18 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 580)
+Completed 200 OK in 10992ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 914)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:23:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:23:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:23:32 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 371)
+Completed 200 OK in 10677ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 650)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:23:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:23:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:23:44 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 358)
+Completed 200 OK in 26087ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 741)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:24:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:24:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:24:18 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 356)
+Completed 200 OK in 8377ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 622)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:24:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:24:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:24:36 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 359)
+Completed 200 OK in 11646ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 704)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:24:48 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:24:48 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:25:12 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 377)
+Completed 200 OK in 30129ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 704)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:25:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:25:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:27:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.4ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 2236)
+Completed 200 OK in 29707ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 10069)
+
+
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:28:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.3ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2236)
+Completed 200 OK in 10849ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 6376)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:28:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:28:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:30:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.5ms | Allocations: 346)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2235)
+Completed 200 OK in 9366ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 6378)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:30:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:30:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:31:09 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 364)
+Completed 200 OK in 8588ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:31:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:31:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:32:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 346)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2244)
+Completed 200 OK in 8798ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 6378)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:32:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:32:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:34:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.5ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 2233)
+Completed 200 OK in 28650ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 10174)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:34:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:34:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-06 23:37:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"mozart", "q"=>"kleine nachtmusik", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.2ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 2224)
+Completed 200 OK in 30115ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 10056)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-06 23:37:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-06 23:37:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouterscore.php?lien=https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)&titre=Eine%20kleine%20Nachtmusik" for 127.0.0.1 at 2026-01-06 23:37:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/ajouterscore.php"):
+  
+Started GET "/ajouterscore.php?lien=https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)&titre=Eine%20kleine%20Nachtmusik" for 127.0.0.1 at 2026-01-06 23:37:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/ajouterscore.php"):
+  
+Started GET "/ajouterscore.php?lien=https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)&titre=Eine%20kleine%20Nachtmusik" for 127.0.0.1 at 2026-01-06 23:42:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 2 pending migrations:
+
+db/migrate/20260107024005_create_scores.rb
+db/migrate/20260107024038_create_musicalinstruments.rb
+
+
+):
+  
+activerecord (7.1.5.1) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.5.1) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.5.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.5.1) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.5.1) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.5.1) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.1) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.13) lib/rack/method_override.rb:28:in `call'
+rack (3.1.13) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.13) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.1) lib/rails/engine.rb:536:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2026-01-06 23:42:18 -0300
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScores (20260107024005)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "scores" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "composer" varchar, "musicalinstrument_id" varchar, "scores" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260107024005') RETURNING "version"[0m
+  [1m[36mTRANSACTION (124.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMusicalinstruments (20260107024038)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "musicalinstruments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260107024038') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ajouterscore.php" for 127.0.0.1 at 2026-01-06 23:42:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScoresController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  Rendered scores/_form.html.erb (Duration: 6.4ms | Allocations: 3564)
+  Rendered scores/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3869)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4245)
+Completed 200 OK in 26ms (Views: 8.5ms | ActiveRecord: 1.4ms | Allocations: 17014)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:42:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."name" = ? AND "musicalinstruments"."description" = ? LIMIT ?[0m  [["name", "violin"], ["description", "violin/violon"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMusicalinstrument Create (0.2ms)[0m  [1m[32mINSERT INTO "musicalinstruments" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "violin"], ["description", "violin/violon"], ["created_at", "2026-01-07 02:42:28.637142"], ["updated_at", "2026-01-07 02:42:28.637142"]]
+  [1m[36mTRANSACTION (38.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMusicalinstrument Load (0.0ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."name" = ? AND "musicalinstruments"."description" = ? LIMIT ?[0m  [["name", "piano"], ["description", "piano/klavier"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMusicalinstrument Create (0.9ms)[0m  [1m[32mINSERT INTO "musicalinstruments" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "piano"], ["description", "piano/klavier"], ["created_at", "2026-01-07 02:42:28.680185"], ["updated_at", "2026-01-07 02:42:28.680185"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."name" = ? AND "musicalinstruments"."description" = ? LIMIT ?[0m  [["name", "violin"], ["description", "violin/violon"], ["LIMIT", 1]]
+  [1m[36mMusicalinstrument Load (0.0ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."name" = ? AND "musicalinstruments"."description" = ? LIMIT ?[0m  [["name", "piano"], ["description", "piano/klavier"], ["LIMIT", 1]]
+Started GET "/ajouterscore.php" for 127.0.0.1 at 2026-01-06 23:43:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScoresController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments"[0m
+  ↳ app/views/scores/_form.html.erb:26:in `collect'
+  Rendered scores/_form.html.erb (Duration: 26.5ms | Allocations: 9593)
+  Rendered scores/new.html.erb within layouts/application (Duration: 27.3ms | Allocations: 10027)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 10432)
+Completed 200 OK in 52ms (Views: 31.0ms | ActiveRecord: 1.8ms | Allocations: 25741)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:43:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterscore.php?lien=https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)&titre=Eine%20kleine%20Nachtmusik" for 127.0.0.1 at 2026-01-06 23:43:23 -0300
+Processing by ScoresController#new as HTML
+  Parameters: {"lien"=>"https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)", "titre"=>"Eine kleine Nachtmusik"}
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.2ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments"[0m
+  ↳ app/views/scores/_form.html.erb:26:in `collect'
+  Rendered scores/_form.html.erb (Duration: 5.6ms | Allocations: 1483)
+  Rendered scores/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1563)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1719)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 1982)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:43:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddLinkToScores (20260107024509)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "scores" ADD "link" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260107024509') RETURNING "version"[0m
+  [1m[36mTRANSACTION (36.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ajouterscore.php?lien=https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)&titre=Eine%20kleine%20Nachtmusik" for 127.0.0.1 at 2026-01-06 23:45:44 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScoresController#new as HTML
+  Parameters: {"lien"=>"https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)", "titre"=>"Eine kleine Nachtmusik"}
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments"[0m
+  ↳ app/views/scores/_form.html.erb:26:in `collect'
+  Rendered scores/_form.html.erb (Duration: 16.3ms | Allocations: 9564)
+  Rendered scores/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 9998)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 10403)
+Completed 200 OK in 42ms (Views: 20.0ms | ActiveRecord: 1.7ms | Allocations: 26176)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:45:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterscore.php?lien=https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)&titre=Eine%20kleine%20Nachtmusik" for 127.0.0.1 at 2026-01-06 23:46:02 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScoresController#new as HTML
+  Parameters: {"lien"=>"https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)", "titre"=>"Eine kleine Nachtmusik"}
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments"[0m
+  ↳ app/views/scores/_form.html.erb:26:in `collect'
+  Rendered scores/_form.html.erb (Duration: 18.1ms | Allocations: 9548)
+  Rendered scores/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 9982)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 10387)
+Completed 200 OK in 46ms (Views: 21.9ms | ActiveRecord: 2.2ms | Allocations: 26160)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-06 23:46:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/ajouterscore.php?lien=https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)&titre=Eine%20kleine%20Nachtmusik" for 127.0.0.1 at 2026-01-07 00:03:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScoresController#new as HTML
+  Parameters: {"lien"=>"https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)", "titre"=>"Eine kleine Nachtmusik"}
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments"[0m
+  ↳ app/views/scores/_form.html.erb:26:in `collect'
+  Rendered scores/_form.html.erb (Duration: 16.5ms | Allocations: 9642)
+  Rendered scores/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 10076)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 10481)
+Completed 200 OK in 66ms (Views: 20.5ms | ActiveRecord: 1.8ms | Allocations: 27445)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-07 00:03:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/scores" for 127.0.0.1 at 2026-01-07 00:03:23 -0300
+Processing by ScoresController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>{"title"=>"Eine kleine Nachtmusik", "composer"=>"mozart", "musicalinstrument_id"=>"1", "link"=>"https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)", "scores"=>""}, "commit"=>"Create Score"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mMusicalinstrument Load (2.0ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mScore Create (0.4ms)[0m  [1m[32mINSERT INTO "scores" ("title", "composer", "musicalinstrument_id", "scores", "created_at", "updated_at", "link") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Eine kleine Nachtmusik"], ["composer", "mozart"], ["musicalinstrument_id", "1"], ["scores", "<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/01777\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/01778\">mozart  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/279787\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/914562\">mozart  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/309239\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/309240\">mozart  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/893869\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/893870\">mozart  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/43750\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/43751\">mozart  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/58374\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/58375\">mozart  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/483733\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/258943\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/258944\">mozart  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/395343\">mozart  Violins III (substitute for Violas)</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/730536\">mozart  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/730537\">mozart  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/572757\">mozart  Violin 1</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/572758\">mozart  Violin 2</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/451728\">mozart  Nos.2-4 - Violin Part</a></p>\n"], ["created_at", "2026-01-07 03:03:23.386977"], ["updated_at", "2026-01-07 03:03:23.386977"], ["link", "https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)"]]
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (34.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/scores/1
+Completed 302 Found in 15751ms (ActiveRecord: 37.1ms | Allocations: 9983)
+
+
+Started GET "/scores/1" for 127.0.0.1 at 2026-01-07 00:03:38 -0300
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+  Rendering layout layouts/application.html.erb
+  Rendering scores/show.html.erb within layouts/application
+  Rendered scores/_score.html.erb (Duration: 0.8ms | Allocations: 222)
+  Rendered scores/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1101)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1257)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 2661)
+
+
+Started GET "/scores/styles.css" for 127.0.0.1 at 2026-01-07 00:03:39 -0300
+Processing by ScoresController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 852)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Score with 'id'=styles):
+  
+app/controllers/scores_controller.rb:63:in `set_score'
+Started GET "/scores/1" for 127.0.0.1 at 2026-01-07 00:04:28 -0300
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+  Rendering layout layouts/application.html.erb
+  Rendering scores/show.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/scores/_score.html.erb:14
+  Rendered scores/_score.html.erb (Duration: 5.7ms | Allocations: 5015)
+  Rendered scores/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 5790)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 6148)
+Completed 200 OK in 18ms (Views: 8.7ms | ActiveRecord: 2.2ms | Allocations: 12829)
+
+
+Started GET "/scores/styles.css" for 127.0.0.1 at 2026-01-07 00:04:28 -0300
+Processing by ScoresController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 834)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Score with 'id'=styles):
+  
+app/controllers/scores_controller.rb:63:in `set_score'
