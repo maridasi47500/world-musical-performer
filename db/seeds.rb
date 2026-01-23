@@ -9,3 +9,5 @@
 #   end
 Musicalinstrument.find_or_create_by!(name: "violin", description: "violin/violon")
 Musicalinstrument.find_or_create_by!(name: "piano", description: "piano/klavier")
+Musicalinstrument.find_or_create_by!(name: "trombone", description: "trombone")
+Musicalinstrument.find_or_create_by!(name: "cor", description: "horn/cor/trompa")

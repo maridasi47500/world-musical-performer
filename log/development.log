@@ -2808,3 +2808,1420 @@ Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 834)
 ActiveRecord::RecordNotFound (Couldn't find Score with 'id'=styles):
   
 app/controllers/scores_controller.rb:63:in `set_score'
+Started GET "/" for 127.0.0.1 at 2026-01-08 20:28:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 1050)
+Completed 200 OK in 394ms (Views: 77.9ms | ActiveRecord: 0.0ms | Allocations: 8740)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-08 20:28:32 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-08 20:28:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-08 20:28:58 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"saint saens", "q"=>"danse macabre", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.2ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 579)
+Completed 200 OK in 32324ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 988)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-08 20:29:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-08 20:29:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouterscore.php?composer=saint%20saens&lien=https://imslp.org/wiki/Danse_macabre,_Op.40_(Saint-Sa%C3%ABns,_Camille)&titre=Danse%20macabre" for 127.0.0.1 at 2026-01-08 20:29:34 -0300
+Processing by ScoresController#new as HTML
+  Parameters: {"composer"=>"saint saens", "lien"=>"https://imslp.org/wiki/Danse_macabre,_Op.40_(Saint-Saëns,_Camille)", "titre"=>"Danse macabre"}
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.7ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments"[0m
+  ↳ app/views/scores/_form.html.erb:26:in `collect'
+  Rendered scores/_form.html.erb (Duration: 78.2ms | Allocations: 10219)
+  Rendered scores/new.html.erb within layouts/application (Duration: 84.6ms | Allocations: 10499)
+  Rendered layout layouts/application.html.erb (Duration: 85.4ms | Allocations: 10656)
+Completed 200 OK in 339ms (Views: 85.4ms | ActiveRecord: 5.2ms | Allocations: 25929)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-08 20:29:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/scores" for 127.0.0.1 at 2026-01-08 20:29:38 -0300
+Processing by ScoresController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>{"title"=>"Danse macabre", "composer"=>"saint saens", "musicalinstrument_id"=>"1", "link"=>"https://imslp.org/wiki/Danse_macabre,_Op.40_(Saint-Saëns,_Camille)", "scores"=>""}, "commit"=>"Create Score"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mMusicalinstrument Load (1.9ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mScore Create (0.3ms)[0m  [1m[32mINSERT INTO "scores" ("title", "composer", "musicalinstrument_id", "scores", "created_at", "updated_at", "link") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Danse macabre"], ["composer", "saint saens"], ["musicalinstrument_id", "1"], ["scores", "<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/591802/sebpp\">saint saens  Violin solo</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/37859/sebpp\">saint saens  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/37860/sebpp\">saint saens  Violins II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/66553/sebpp\">saint saens  Violin solo</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/66554/sebpp\">saint saens  Violin solo/Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/66555/sebpp\">saint saens  Violins I</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/272924/sebpp\">saint saens  Violin solo</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/272925/sebpp\">saint saens  Violins I, II</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/33277/sebpp\">saint saens  Complete Score and Violin Part</a></p>\n<p><a href=\"https://imslp.org/wiki/Special:ImagefromIndex/616758/sebpp\">saint saens  Violin Part</a></p>\n"], ["created_at", "2026-01-08 23:29:38.797157"], ["updated_at", "2026-01-08 23:29:38.797157"], ["link", "https://imslp.org/wiki/Danse_macabre,_Op.40_(Saint-Saëns,_Camille)"]]
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (34.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/scores/2
+Completed 302 Found in 16264ms (ActiveRecord: 36.8ms | Allocations: 10430)
+
+
+Started GET "/scores/2" for 127.0.0.1 at 2026-01-08 20:29:54 -0300
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+  Rendering layout layouts/application.html.erb
+  Rendering scores/show.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/scores/_score.html.erb:14
+  Rendered scores/_score.html.erb (Duration: 2.6ms | Allocations: 719)
+  Rendered scores/show.html.erb within layouts/application (Duration: 13.4ms | Allocations: 1662)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 1818)
+Completed 200 OK in 32ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 3219)
+
+
+Started GET "/scores/styles.css" for 127.0.0.1 at 2026-01-08 20:29:55 -0300
+Processing by ScoresController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 851)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Score with 'id'=styles):
+  
+app/controllers/scores_controller.rb:63:in `set_score'
+Started GET "/" for 127.0.0.1 at 2026-01-08 23:31:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1121)
+Completed 200 OK in 68ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 5193)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-08 23:31:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-08 23:31:48 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-08 23:32:02 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"Orquestra Jovem", "q"=>" Ecos da Amazônia", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 632)
+Completed 200 OK in 17234ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1096)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-08 23:32:20 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-08 23:32:20 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouter.php?lienvid=c6VFWiOQots&titre=%EE%80%80Orquestra%EE%80%81%20%EE%80%80Jovem%EE%80%81%20%EE%80%80Ecos%EE%80%81%20%EE%80%80da%EE%80%81%20%EE%80%80Amaz%C3%B4nia%EE%80%81%20-%2003/12%20/2025%20from%20YouTube%20%C2%B7%20Duration:%20%201%20hour%2052%20minutes%2011%20seconds%20%20%C2%B7%202%20views%20%C2%B7%20uploaded%20on%201%20month%20ago%20%C2%B7%20uploaded%20by%20Academia%20Paraense%20de%20M%C3%BAsica%20-%20APM%20%C2%B7%20Click%20to%20play.%20%C2%B7%20Orquestra%20Jovem%20Ecos%20da%20Amaz%C3%B4nia%20-%2003/12%20/2025" for 127.0.0.1 at 2026-01-08 23:32:28 -0300
+Processing by ClipsController#new as HTML
+  Parameters: {"lienvid"=>"c6VFWiOQots", "titre"=>"Orquestra Jovem Ecos da Amazônia - 03/12 /2025 from YouTube · Duration:  1 hour 52 minutes 11 seconds  · 2 views · uploaded on 1 month ago · uploaded by Academia Paraense de Música - APM · Click to play. · Orquestra Jovem Ecos da Amazônia - 03/12 /2025"}
+  Rendering layout layouts/application.html.erb
+  Rendering clips/new.html.erb within layouts/application
+  Rendered clips/_form.html.erb (Duration: 20.3ms | Allocations: 2700)
+  Rendered clips/new.html.erb within layouts/application (Duration: 31.2ms | Allocations: 2980)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 3137)
+Completed 200 OK in 235ms (Views: 33.3ms | ActiveRecord: 3.1ms | Allocations: 18744)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-08 23:32:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/clips" for 127.0.0.1 at 2026-01-08 23:32:37 -0300
+Processing by ClipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "clip"=>{"title"=>"Orquestra Jovem Ecos da Amazônia - 03/12 /2025 from YouTube · Duration:  1 hour 52 minutes 11 seconds  · 2 views · uploaded on 1 month ago · uploaded by Academia Paraense de Música - APM · Click to play. · Orquestra Jovem Ecos da Amazônia - 03/12 /2025", "link"=>"c6VFWiOQots", "artist_id"=>"", "description"=>"", "sortie"=>""}, "commit"=>"Create Clip"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mArtist Load (13.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Orquestra Jovem Ecos da Amazônia"], ["LIMIT", 1]]
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mClip Create (0.3ms)[0m  [1m[32mINSERT INTO "clips" ("title", "link", "artist_id", "description", "sortie", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Orquestra Jovem Ecos da Amazônia - 03/12 /2025 from YouTube · Duration:  1 hour 52 minutes 11 seconds  · 2 views · uploaded on 1 month ago · uploaded by Academia Paraense de Música - APM · Click to play. · Orquestra Jovem Ecos da Amazônia - 03/12 /2025"], ["link", "c6VFWiOQots"], ["artist_id", nil], ["description", ""], ["sortie", "2025-12-04"], ["created_at", "2026-01-09 02:32:38.855124"], ["updated_at", "2026-01-09 02:32:38.855124"], ["image", "https://img.youtube.com/vi/c6VFWiOQots/mqdefault.jpg"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mArtist Create (0.1ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["name", "Orquestra Jovem Ecos da Amazônia"], ["created_at", "2026-01-09 02:32:38.859206"], ["updated_at", "2026-01-09 02:32:38.859206"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mClip::HABTM_Artists Create (0.2ms)[0m  [1m[32mINSERT INTO "cliphasartists" ("clip_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["clip_id", "4"], ["artist_id", "3"], ["created_at", "2026-01-09 02:32:38.862091"], ["updated_at", "2026-01-09 02:32:38.862091"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (37.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/clips/4
+Completed 302 Found in 1280ms (ActiveRecord: 54.5ms | Allocations: 26498)
+
+
+Started GET "/clips/4" for 127.0.0.1 at 2026-01-08 23:32:38 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "4"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 4.9ms | Allocations: 2078)
+  Rendered clips/show.html.erb within layouts/application (Duration: 25.6ms | Allocations: 3004)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 3160)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.4ms | Allocations: 4661)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-08 23:32:38 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 852)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/" for 127.0.0.1 at 2026-01-09 18:38:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 1050)
+Completed 200 OK in 79ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 5124)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 18:38:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-09 18:38:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2026-01-09 18:39:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3472)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 7515)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `videos_path' for an instance of #<Class:0x00007713bfbb3998>):
+    29: 
+    30:   <body>
+    31: <%=link_to "welcome", root_path%>
+    32: <%=link_to "videos", videos_path%>
+    33: <%=link_to "scores", scores_path%>
+    34: <%=link_to "pics", pics_path%>
+    35: <br>
+  
+app/views/layouts/application.html.erb:32
+Started PUT "/__web_console/repl_sessions/8be42333c51fab873bdc4a9d19cf9630" for 127.0.0.1 at 2026-01-09 18:39:22 -0300
+Started PUT "/__web_console/repl_sessions/8be42333c51fab873bdc4a9d19cf9630" for 127.0.0.1 at 2026-01-09 18:39:30 -0300
+Started PUT "/__web_console/repl_sessions/8be42333c51fab873bdc4a9d19cf9630" for 127.0.0.1 at 2026-01-09 18:39:34 -0300
+Started GET "/" for 127.0.0.1 at 2026-01-09 18:40:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2228)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 6302)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 18:40:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-09 18:40:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started GET "/clips" for 127.0.0.1 at 2026-01-09 18:40:10 -0300
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (36.6ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:6
+  Rendered clips/index.html.erb within layouts/application (Duration: 63.2ms | Allocations: 8398)
+  Rendered layout layouts/application.html.erb (Duration: 64.1ms | Allocations: 8614)
+Completed 200 OK in 225ms (Views: 24.5ms | ActiveRecord: 40.4ms | Allocations: 17582)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 18:40:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips/4" for 127.0.0.1 at 2026-01-09 18:40:14 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mClip Load (0.3ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "4"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 101.0ms | Allocations: 9405)
+  Rendered clips/show.html.erb within layouts/application (Duration: 126.6ms | Allocations: 10295)
+  Rendered layout layouts/application.html.erb (Duration: 127.4ms | Allocations: 10499)
+Completed 200 OK in 150ms (Views: 127.0ms | ActiveRecord: 1.4ms | Allocations: 13091)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-09 18:40:14 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 854)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/" for 127.0.0.1 at 2026-01-09 19:27:59 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2222)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 6296)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 19:27:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-09 19:27:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-09 19:28:23 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"villa lobos", "q"=>"o trenzinho da caipora", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 612)
+Completed 200 OK in 44173ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1168)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-09 19:29:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-09 19:29:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."name" = ? AND "musicalinstruments"."description" = ? LIMIT ?[0m  [["name", "violin"], ["description", "violin/violon"], ["LIMIT", 1]]
+  [1m[36mMusicalinstrument Load (0.0ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."name" = ? AND "musicalinstruments"."description" = ? LIMIT ?[0m  [["name", "piano"], ["description", "piano/klavier"], ["LIMIT", 1]]
+  [1m[36mMusicalinstrument Load (0.0ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."name" = ? AND "musicalinstruments"."description" = ? LIMIT ?[0m  [["name", "trombone"], ["description", "trombone"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMusicalinstrument Create (1.0ms)[0m  [1m[32mINSERT INTO "musicalinstruments" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "trombone"], ["description", "trombone"], ["created_at", "2026-01-09 22:33:33.309042"], ["updated_at", "2026-01-09 22:33:33.309042"]]
+  [1m[36mTRANSACTION (41.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."name" = ? AND "musicalinstruments"."description" = ? LIMIT ?[0m  [["name", "cor"], ["description", "horn/cor/trompa"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMusicalinstrument Create (0.9ms)[0m  [1m[32mINSERT INTO "musicalinstruments" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "cor"], ["description", "horn/cor/trompa"], ["created_at", "2026-01-09 22:33:33.355246"], ["updated_at", "2026-01-09 22:33:33.355246"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/home/search" for 127.0.0.1 at 2026-01-09 19:34:41 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"villa lobos", "q"=>"Bachianas brasileiras No.2", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 392)
+Completed 200 OK in 11385ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 666)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-09 19:34:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-09 19:34:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-09 19:34:54 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"villa lobos", "q"=>"Bachianas brasileiras No.2", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 419)
+Completed 200 OK in 19635ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 812)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-09 19:35:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-09 19:35:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouterscore.php?composer=villa%20lobos&lien=https://imslp.org/wiki/Bachianas_brasileiras_No.2,_W247,_250-252,_254,_568,_569_(Villa-Lobos,_Heitor)&titre=Bachianas%20brasileiras%20No.2" for 127.0.0.1 at 2026-01-09 19:36:08 -0300
+Processing by ScoresController#new as HTML
+  Parameters: {"composer"=>"villa lobos", "lien"=>"https://imslp.org/wiki/Bachianas_brasileiras_No.2,_W247,_250-252,_254,_568,_569_(Villa-Lobos,_Heitor)", "titre"=>"Bachianas brasileiras No.2"}
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.2ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments"[0m
+  ↳ app/views/scores/_form.html.erb:26:in `collect'
+  Rendered scores/_form.html.erb (Duration: 19.7ms | Allocations: 8286)
+  Rendered scores/new.html.erb within layouts/application (Duration: 26.7ms | Allocations: 8567)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 8772)
+Completed 200 OK in 81ms (Views: 27.3ms | ActiveRecord: 2.1ms | Allocations: 21647)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 19:36:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/scores" for 127.0.0.1 at 2026-01-09 19:36:15 -0300
+Processing by ScoresController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>{"title"=>"Bachianas brasileiras No.2", "composer"=>"villa lobos", "musicalinstrument_id"=>"3", "link"=>"https://imslp.org/wiki/Bachianas_brasileiras_No.2,_W247,_250-252,_254,_568,_569_(Villa-Lobos,_Heitor)", "scores"=>""}, "commit"=>"Create Score"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mMusicalinstrument Load (2.0ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mScore Create (0.3ms)[0m  [1m[32mINSERT INTO "scores" ("title", "composer", "musicalinstrument_id", "scores", "created_at", "updated_at", "link") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Bachianas brasileiras No.2"], ["composer", "villa lobos"], ["musicalinstrument_id", "3"], ["scores", ""], ["created_at", "2026-01-09 22:36:15.378472"], ["updated_at", "2026-01-09 22:36:15.378472"], ["link", "https://imslp.org/wiki/Bachianas_brasileiras_No.2,_W247,_250-252,_254,_568,_569_(Villa-Lobos,_Heitor)"]]
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (39.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/scores/3
+Completed 302 Found in 15544ms (ActiveRecord: 41.6ms | Allocations: 8116)
+
+
+Started GET "/scores/3" for 127.0.0.1 at 2026-01-09 19:36:30 -0300
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+  Rendering layout layouts/application.html.erb
+  Rendering scores/show.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.1ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/scores/_score.html.erb:14
+  Rendered scores/_score.html.erb (Duration: 3.1ms | Allocations: 719)
+  Rendered scores/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1577)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 1781)
+Completed 200 OK in 37ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 3182)
+
+
+Started GET "/scores/styles.css" for 127.0.0.1 at 2026-01-09 19:36:30 -0300
+Processing by ScoresController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mScore Load (0.1ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 851)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Score with 'id'=styles):
+  
+app/controllers/scores_controller.rb:63:in `set_score'
+Started GET "/" for 127.0.0.1 at 2026-01-09 22:42:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1151)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 5225)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 22:42:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-09 22:42:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-09 22:42:51 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"Orquestra do Theatro da Paz", "q"=>"concert", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 618)
+Completed 200 OK in 12152ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 976)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-09 22:43:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-09 22:43:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouter.php?lienvid=vGn2-OnmSfU&titre=Rehearsing%20my%20" for 127.0.0.1 at 2026-01-09 22:43:14 -0300
+Processing by ClipsController#new as HTML
+  Parameters: {"lienvid"=>"vGn2-OnmSfU", "titre"=>"Rehearsing my "}
+  Rendering layout layouts/application.html.erb
+  Rendering clips/new.html.erb within layouts/application
+  Rendered clips/_form.html.erb (Duration: 19.3ms | Allocations: 2582)
+  Rendered clips/new.html.erb within layouts/application (Duration: 30.8ms | Allocations: 2861)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 3066)
+Completed 200 OK in 77ms (Views: 32.0ms | ActiveRecord: 2.1ms | Allocations: 18082)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 22:43:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/clips" for 127.0.0.1 at 2026-01-09 22:43:19 -0300
+Processing by ClipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "clip"=>{"title"=>"Rehearsing my ", "link"=>"vGn2-OnmSfU", "artist_id"=>"", "description"=>"", "sortie"=>""}, "commit"=>"Create Clip"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Rehearsing my"], ["LIMIT", 1]]
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mClip Create (0.2ms)[0m  [1m[32mINSERT INTO "clips" ("title", "link", "artist_id", "description", "sortie", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Rehearsing my "], ["link", "vGn2-OnmSfU"], ["artist_id", nil], ["description", ""], ["sortie", "2025-10-10"], ["created_at", "2026-01-10 01:43:20.920793"], ["updated_at", "2026-01-10 01:43:20.920793"], ["image", "https://img.youtube.com/vi/vGn2-OnmSfU/mqdefault.jpg"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mArtist Create (0.1ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["name", "Rehearsing my"], ["created_at", "2026-01-10 01:43:20.923305"], ["updated_at", "2026-01-10 01:43:20.923305"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mClip::HABTM_Artists Create (0.1ms)[0m  [1m[32mINSERT INTO "cliphasartists" ("clip_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["clip_id", "5"], ["artist_id", "4"], ["created_at", "2026-01-10 01:43:20.924900"], ["updated_at", "2026-01-10 01:43:20.924900"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (38.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/clips/5
+Completed 302 Found in 1112ms (ActiveRecord: 41.7ms | Allocations: 22934)
+
+
+Started GET "/clips/5" for 127.0.0.1 at 2026-01-09 22:43:20 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "5"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 4.8ms | Allocations: 2077)
+  Rendered clips/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2950)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3154)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 4653)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-09 22:43:21 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 852)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/ajouter.php?lienvid=abDvMsTo1Nw&titre=Orquestra%20Sinf%C3%B4nica%20do%20Theatro%20da%20Paz%20from%20YouTube%20%C2%B7%20Duration:%20%201%20hour%206%20minutes%201%20seconds%20%20%C2%B7%2038%20views%20%C2%B7%20uploaded%20on%20Dec%2020,%202024%20%C2%B7%20uploaded%20by%20Gera%20Sorriso%20%C2%B7%20Click%20to%20play." for 127.0.0.1 at 2026-01-09 22:43:58 -0300
+Processing by ClipsController#new as HTML
+  Parameters: {"lienvid"=>"abDvMsTo1Nw", "titre"=>"Orquestra Sinfônica do Theatro da Paz from YouTube · Duration:  1 hour 6 minutes 1 seconds  · 38 views · uploaded on Dec 20, 2024 · uploaded by Gera Sorriso · Click to play."}
+  Rendering layout layouts/application.html.erb
+  Rendering clips/new.html.erb within layouts/application
+  Rendered clips/_form.html.erb (Duration: 2.1ms | Allocations: 1235)
+  Rendered clips/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1315)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1519)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1778)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 22:43:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/clips" for 127.0.0.1 at 2026-01-09 22:44:01 -0300
+Processing by ClipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "clip"=>{"title"=>"Orquestra Sinfônica do Theatro da Paz from YouTube · Duration:  1 hour 6 minutes 1 seconds  · 38 views · uploaded on Dec 20, 2024 · uploaded by Gera Sorriso · Click to play.", "link"=>"abDvMsTo1Nw", "artist_id"=>"", "description"=>"", "sortie"=>""}, "commit"=>"Create Clip"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Orquestra Sinfônica do Theatro da Paz from YouTube · Duration: 1 hour 6 minutes 1 seconds · 38 views · uploaded on Dec 20, 2024 · uploaded by Gera Sorriso · Click to play."], ["LIMIT", 1]]
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mClip Create (0.4ms)[0m  [1m[32mINSERT INTO "clips" ("title", "link", "artist_id", "description", "sortie", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Orquestra Sinfônica do Theatro da Paz from YouTube · Duration:  1 hour 6 minutes 1 seconds  · 38 views · uploaded on Dec 20, 2024 · uploaded by Gera Sorriso · Click to play."], ["link", "abDvMsTo1Nw"], ["artist_id", nil], ["description", "A Orquestra Sinfônica do Theatro da Paz (OSTP) é uma orquestra renomada localizada em Belém, Pará. Fundada em 1996, a orquestra completou 20 anos em 20162. A OSTP é conhecida por suas apresentações de alta qualidade e por promover a cultura musical na região.\nNeste video a orquestra esteve se apresentando na Estação Cultural de Icoaraci.\nA orquestra já teve vários maestros titulares, incluindo Andi Pereira, Barry Ford, Mateus Araujo e Enaldo Oliveira. Desde 2011, a orquestra é conduzida pelo maestro Miguel Campos Neto. A OSTP também já teve a participação de solistas renomados, como Arnaldo Cohen, Arthur Moreira Lima e Ryu Goto.\n\nSeja membro deste canal e ganhe benefícios:\nhttps://www.youtube.com/channel/UCzeKpM1G96eIkre710CSydg/join\n\nCanal no Youtube sobre TAB (Transtorno Afetivo Bipolar), onde um portador do Transtorno conta um pouco da sua experiencia. De seus sentimentos e emoções diante das adversidades do dia. E como consegue superar através do humor e da escrita.\nAjude ao canal a crescer, se inscreva e marque o sino e compartilhe os vídeos. Obrigado."], ["sortie", "2024-12-20"], ["created_at", "2026-01-10 01:44:02.620913"], ["updated_at", "2026-01-10 01:44:02.620913"], ["image", "https://img.youtube.com/vi/abDvMsTo1Nw/mqdefault.jpg"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mArtist Create (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["name", "Orquestra Sinfônica do Theatro da Paz from YouTube · Duration: 1 hour 6 minutes 1 seconds · 38 views · uploaded on Dec 20, 2024 · uploaded by Gera Sorriso · Click to play."], ["created_at", "2026-01-10 01:44:02.623520"], ["updated_at", "2026-01-10 01:44:02.623520"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mClip::HABTM_Artists Create (0.2ms)[0m  [1m[32mINSERT INTO "cliphasartists" ("clip_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["clip_id", "6"], ["artist_id", "5"], ["created_at", "2026-01-10 01:44:02.626298"], ["updated_at", "2026-01-10 01:44:02.626298"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/clips/6
+Completed 302 Found in 1051ms (ActiveRecord: 2.8ms | Allocations: 7134)
+
+
+Started GET "/clips/6" for 127.0.0.1 at 2026-01-09 22:44:02 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "6"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 2.5ms | Allocations: 744)
+  Rendered clips/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1168)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1372)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 1961)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-09 22:44:02 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 824)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/" for 127.0.0.1 at 2026-01-09 22:45:17 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 390)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 614)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 22:45:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-09 22:45:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-09 22:45:24 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>" Orquestra Sinfônica do Theatro da Paz", "q"=>"musica", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 416)
+Completed 200 OK in 11154ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 685)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-09 22:45:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-09 22:45:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-09 22:45:37 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>" Orquestra Sinfônica do Theatro da Paz", "q"=>"musica", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 401)
+Completed 200 OK in 13700ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 684)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-09 22:45:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-09 22:45:51 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouter.php?lienvid=AhID4txI6yE&titre=COP30:%20Orquestra%20ensaia%20%C3%B3pera%20sobre%20universo%20ind%C3%ADgena%20no%20Theatro%20da%20Paz,%20em%20Bel%C3%A9m%20|%20CNN%20PRIME%20TIME%20from%20YouTube%20%C2%B7%20Duration:%20%204%20minutes%2048%20seconds%20%20%C2%B7%204.7K%20views%20%C2%B7%20uploaded%20on%202%20months%20ago%20%C2%B7%20uploaded%20by%20CNN%20Brasil%20%C2%B7%20Click%20to%20play." for 127.0.0.1 at 2026-01-09 22:46:46 -0300
+Processing by ClipsController#new as HTML
+  Parameters: {"lienvid"=>"AhID4txI6yE", "titre"=>"COP30: Orquestra ensaia ópera sobre universo indígena no Theatro da Paz, em Belém | CNN PRIME TIME from YouTube · Duration:  4 minutes 48 seconds  · 4.7K views · uploaded on 2 months ago · uploaded by CNN Brasil · Click to play."}
+  Rendering layout layouts/application.html.erb
+  Rendering clips/new.html.erb within layouts/application
+  Rendered clips/_form.html.erb (Duration: 3.1ms | Allocations: 1216)
+  Rendered clips/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1296)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1500)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 1757)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 22:46:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/clips" for 127.0.0.1 at 2026-01-09 22:46:49 -0300
+Processing by ClipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "clip"=>{"title"=>"COP30: Orquestra ensaia ópera sobre universo indígena no Theatro da Paz, em Belém | CNN PRIME TIME from YouTube · Duration:  4 minutes 48 seconds  · 4.7K views · uploaded on 2 months ago · uploaded by CNN Brasil · Click to play.", "link"=>"AhID4txI6yE", "artist_id"=>"", "description"=>"", "sortie"=>""}, "commit"=>"Create Clip"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "COP30: Orquestra ensaia ópera sobre universo indígena no Theatro da Paz, em Belém | CNN PRIME TIME from YouTube · Duration: 4 minutes 48 seconds · 4.7K views · uploaded on 2 months ago · uploaded by CNN Brasil · Click to play."], ["LIMIT", 1]]
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mClip Create (0.3ms)[0m  [1m[32mINSERT INTO "clips" ("title", "link", "artist_id", "description", "sortie", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "COP30: Orquestra ensaia ópera sobre universo indígena no Theatro da Paz, em Belém | CNN PRIME TIME from YouTube · Duration:  4 minutes 48 seconds  · 4.7K views · uploaded on 2 months ago · uploaded by CNN Brasil · Click to play."], ["link", "AhID4txI6yE"], ["artist_id", nil], ["description", "Na expectativa da COP30, que começa no próximo dia 10, a cidade de Belém, no Pará, prepara uma programação cultural especial para os turistas. Entre as atrações, uma orquestra apresentará a ópera I-Juca Pirama, que aborda o universo indígena, no Theatro da Paz. O maestro Aldo Brizzi afirmou que o projeto quer relançar a verdadeira cultura indígena e toda cultura de raiz do Brasil. #CNNBrasil\n\nInscreva-se no canal da CNN Brasil no YouTube.\n\nACOMPANHE A CNN BRASIL TAMBÉM NAS OUTRAS PLATAFORMAS:\n\nSite: https://www.cnnbrasil.com.br/\nFacebook: https://www.facebook.com/cnnbrasil\nTwitter: https://www.twitter.com/cnnbrasil\nInstagram: https://www.instagram.com/cnnbrasil\nTikTok: https://www.tiktok.com/@cnnbrasil"], ["sortie", "2025-11-05"], ["created_at", "2026-01-10 01:46:50.192807"], ["updated_at", "2026-01-10 01:46:50.192807"], ["image", "https://img.youtube.com/vi/AhID4txI6yE/mqdefault.jpg"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mArtist Create (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["name", "COP30: Orquestra ensaia ópera sobre universo indígena no Theatro da Paz, em Belém | CNN PRIME TIME from YouTube · Duration: 4 minutes 48 seconds · 4.7K views · uploaded on 2 months ago · uploaded by CNN Brasil · Click to play."], ["created_at", "2026-01-10 01:46:50.196172"], ["updated_at", "2026-01-10 01:46:50.196172"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mClip::HABTM_Artists Create (0.1ms)[0m  [1m[32mINSERT INTO "cliphasartists" ("clip_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["clip_id", "7"], ["artist_id", "6"], ["created_at", "2026-01-10 01:46:50.198877"], ["updated_at", "2026-01-10 01:46:50.198877"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/clips/7
+Completed 302 Found in 1071ms (ActiveRecord: 1.4ms | Allocations: 7146)
+
+
+Started GET "/clips/7" for 127.0.0.1 at 2026-01-09 22:46:50 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "7"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 1.8ms | Allocations: 744)
+  Rendered clips/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1180)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1384)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 1974)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-09 22:46:50 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 823)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/ajouter.php?lienvid=ECLicnCgHhw&titre=SBT%20PAR%C3%81%2004.01.18%20Orquestra%20Sinf%C3%B4nica%20do%20Theatro%20da%20Paz%20%C3%A9%20a%20melhor%20do%20Brasil%20from%20YouTube%20%C2%B7%202.4K%20views%20%C2%B7%20uploaded%20on%20Jan%204,%202018%20%C2%B7%20uploaded%20by%20SBT%20Par%C3%A1%20%C2%B7%20Click%20to%20play." for 127.0.0.1 at 2026-01-09 22:46:57 -0300
+Processing by ClipsController#new as HTML
+  Parameters: {"lienvid"=>"ECLicnCgHhw", "titre"=>"SBT PARÁ 04.01.18 Orquestra Sinfônica do Theatro da Paz é a melhor do Brasil from YouTube · 2.4K views · uploaded on Jan 4, 2018 · uploaded by SBT Pará · Click to play."}
+  Rendering layout layouts/application.html.erb
+  Rendering clips/new.html.erb within layouts/application
+  Rendered clips/_form.html.erb (Duration: 1.6ms | Allocations: 1210)
+  Rendered clips/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1290)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1494)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1753)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 22:46:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/clips" for 127.0.0.1 at 2026-01-09 22:47:01 -0300
+Processing by ClipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "clip"=>{"title"=>"SBT PARÁ 04.01.18 Orquestra Sinfônica do Theatro da Paz é a melhor do Brasil from YouTube · 2.4K views · uploaded on Jan 4, 2018 · uploaded by SBT Pará · Click to play.", "link"=>"ECLicnCgHhw", "artist_id"=>"", "description"=>"", "sortie"=>""}, "commit"=>"Create Clip"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "SBT PARÁ 04.01.18 Orquestra Sinfônica do Theatro da Paz é a melhor do Brasil from YouTube · 2.4K views · uploaded on Jan 4, 2018 · uploaded by SBT Pará · Click to play."], ["LIMIT", 1]]
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mClip Create (0.2ms)[0m  [1m[32mINSERT INTO "clips" ("title", "link", "artist_id", "description", "sortie", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "SBT PARÁ 04.01.18 Orquestra Sinfônica do Theatro da Paz é a melhor do Brasil from YouTube · 2.4K views · uploaded on Jan 4, 2018 · uploaded by SBT Pará · Click to play."], ["link", "ECLicnCgHhw"], ["artist_id", nil], ["description", "A Secretaria de Cultura do Pará e os mais de sessenta integrantes da Orquestra do Theatro da Paz comemoraram  reconhecimento nacional.Sinfônica, que acaba de completar 20 anos de criação, foi considerada a melhor do Brasil, superou, inclusive, a Orquestra Municipal de São Paulo."], ["sortie", "2018-01-04"], ["created_at", "2026-01-10 01:47:02.045613"], ["updated_at", "2026-01-10 01:47:02.045613"], ["image", "https://img.youtube.com/vi/ECLicnCgHhw/mqdefault.jpg"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mArtist Create (0.1ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["name", "SBT PARÁ 04.01.18 Orquestra Sinfônica do Theatro da Paz é a melhor do Brasil from YouTube · 2.4K views · uploaded on Jan 4, 2018 · uploaded by SBT Pará · Click to play."], ["created_at", "2026-01-10 01:47:02.047622"], ["updated_at", "2026-01-10 01:47:02.047622"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mClip::HABTM_Artists Create (0.1ms)[0m  [1m[32mINSERT INTO "cliphasartists" ("clip_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["clip_id", "8"], ["artist_id", "7"], ["created_at", "2026-01-10 01:47:02.049628"], ["updated_at", "2026-01-10 01:47:02.049628"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/clips/8
+Completed 302 Found in 1011ms (ActiveRecord: 2.0ms | Allocations: 7112)
+
+
+Started GET "/clips/8" for 127.0.0.1 at 2026-01-09 22:47:02 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "8"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 2.4ms | Allocations: 744)
+  Rendered clips/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1390)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 1980)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-09 22:47:02 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 823)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/ajouter.php?lienvid=q0hnxtsX2NQ&titre=Strauss:%20Also%20Sprach%20Zarathustra.Orquestra%20Sinf%C3%B4nica%20do%20Teatro%20da%20Paz%20from%20YouTube%20%C2%B7%20Duration:%20%201%20minutes%2031%20seconds%20%20%C2%B7%201K%20views%20%C2%B7%20uploaded%20on%203%20weeks%20ago%20%C2%B7%20uploaded%20by%20Wendel%20Brand%C3%A3o%20%C2%B7%20Click%20to%20play." for 127.0.0.1 at 2026-01-09 22:49:30 -0300
+Processing by ClipsController#new as HTML
+  Parameters: {"lienvid"=>"q0hnxtsX2NQ", "titre"=>"Strauss: Also Sprach Zarathustra.Orquestra Sinfônica do Teatro da Paz from YouTube · Duration:  1 minutes 31 seconds  · 1K views · uploaded on 3 weeks ago · uploaded by Wendel Brandão · Click to play."}
+  Rendering layout layouts/application.html.erb
+  Rendering clips/new.html.erb within layouts/application
+  Rendered clips/_form.html.erb (Duration: 2.0ms | Allocations: 1219)
+  Rendered clips/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1503)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1758)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-09 22:49:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-09 22:49:31 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>" Orquestra Sinfônica do Theatro da Paz", "q"=>"concert", "mysearch"=>"video", "ok3"=>"search"}
+Started POST "/clips" for 127.0.0.1 at 2026-01-09 22:49:34 -0300
+Processing by ClipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "clip"=>{"title"=>"Strauss: Also Sprach Zarathustra.Orquestra Sinfônica do Teatro da Paz from YouTube · Duration:  1 minutes 31 seconds  · 1K views · uploaded on 3 weeks ago · uploaded by Wendel Brandão · Click to play.", "link"=>"q0hnxtsX2NQ", "artist_id"=>"", "description"=>"", "sortie"=>""}, "commit"=>"Create Clip"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Strauss: Also Sprach Zarathustra.Orquestra Sinfônica do Teatro da Paz from YouTube · Duration: 1 minutes 31 seconds · 1K views · uploaded on 3 weeks ago · uploaded by Wendel Brandão · Click to play."], ["LIMIT", 1]]
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mClip Create (0.2ms)[0m  [1m[32mINSERT INTO "clips" ("title", "link", "artist_id", "description", "sortie", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Strauss: Also Sprach Zarathustra.Orquestra Sinfônica do Teatro da Paz from YouTube · Duration:  1 minutes 31 seconds  · 1K views · uploaded on 3 weeks ago · uploaded by Wendel Brandão · Click to play."], ["link", "q0hnxtsX2NQ"], ["artist_id", nil], ["description", ""], ["sortie", "2025-12-16"], ["created_at", "2026-01-10 01:49:35.950909"], ["updated_at", "2026-01-10 01:49:35.950909"], ["image", "https://img.youtube.com/vi/q0hnxtsX2NQ/mqdefault.jpg"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mArtist Create (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["name", "Strauss: Also Sprach Zarathustra.Orquestra Sinfônica do Teatro da Paz from YouTube · Duration: 1 minutes 31 seconds · 1K views · uploaded on 3 weeks ago · uploaded by Wendel Brandão · Click to play."], ["created_at", "2026-01-10 01:49:35.953384"], ["updated_at", "2026-01-10 01:49:35.953384"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mClip::HABTM_Artists Create (0.1ms)[0m  [1m[32mINSERT INTO "cliphasartists" ("clip_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["clip_id", "9"], ["artist_id", "8"], ["created_at", "2026-01-10 01:49:35.956920"], ["updated_at", "2026-01-10 01:49:35.956920"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/clips/9
+Completed 302 Found in 1062ms (ActiveRecord: 2.4ms | Allocations: 7055)
+
+
+Started GET "/clips/9" for 127.0.0.1 at 2026-01-09 22:49:35 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "9"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 2.4ms | Allocations: 743)
+  Rendered clips/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1179)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1383)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 1973)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-09 22:49:36 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 823)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 404)
+Completed 200 OK in 13351ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 300454)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-09 22:49:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-09 22:49:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2026-01-15 18:42:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 1175)
+Completed 200 OK in 66ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 5249)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-15 18:42:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-15 18:42:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-15 18:42:30 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"beethoven", "q"=>"Violin Concerto in D Major (III. Allegro Rondo)", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 649)
+Completed 200 OK in 17610ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1132)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-15 18:42:48 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-15 18:42:48 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouterpic.php?composer=beethoven&lien=https://th.bing.com/th/id/OIP.y0on5lpfU-bMUYqa1KjeXwHaJl?w=124&h=180&c=7&r=0&o=7&pid=1.7&rm=3&titre=beethoven%20Violin%20Concerto%20in%20D%20Major%20III.%20Allegro%20Rondo" for 127.0.0.1 at 2026-01-15 18:42:58 -0300
+Processing by PicsController#new as HTML
+  Parameters: {"composer"=>"beethoven", "lien"=>"https://th.bing.com/th/id/OIP.y0on5lpfU-bMUYqa1KjeXwHaJl?w=124", "h"=>"180", "c"=>"7", "r"=>"0", "o"=>"7", "pid"=>"1.7", "rm"=>"3", "titre"=>"beethoven Violin Concerto in D Major III. Allegro Rondo"}
+  Rendering layout layouts/application.html.erb
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (Duration: 5.9ms | Allocations: 2258)
+  Rendered pics/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2537)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2742)
+Completed 200 OK in 50ms (Views: 14.5ms | ActiveRecord: 1.3ms | Allocations: 14054)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-15 18:42:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/pics" for 127.0.0.1 at 2026-01-15 18:43:04 -0300
+Processing by PicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pic"=>{"title"=>"beethoven Violin Concerto in D Major III. Allegro Rondo", "composer"=>"beethoven", "pic"=>"https://th.bing.com/th/id/OIP.y0on5lpfU-bMUYqa1KjeXwHaJl?w=372&h=540&c=7&r=0&o=7&pid=1.7&rm=3"}, "commit"=>"Create Pic"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mPic Create (36.8ms)[0m  [1m[32mINSERT INTO "pics" ("title", "composer", "pic", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "beethoven Violin Concerto in D Major III. Allegro Rondo"], ["composer", "beethoven"], ["pic", "TALICHIA.svg"], ["created_at", "2026-01-15 21:43:05.502651"], ["updated_at", "2026-01-15 21:43:05.502651"]]
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (52.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pics_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pics/6
+Completed 302 Found in 856ms (ActiveRecord: 89.1ms | Allocations: 3510)
+
+
+Started GET "/pics/6" for 127.0.0.1 at 2026-01-15 18:43:05 -0300
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+  Rendering layout layouts/application.html.erb
+  Rendering pics/show.html.erb within layouts/application
+  Rendered pics/_pic.html.erb (Duration: 0.7ms | Allocations: 206)
+  Rendered pics/show.html.erb within layouts/application (Duration: 33.6ms | Allocations: 1120)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 1324)
+Completed 200 OK in 86ms (Views: 34.9ms | ActiveRecord: 0.2ms | Allocations: 4920)
+
+
+Started GET "/pics/styles.css" for 127.0.0.1 at 2026-01-15 18:43:05 -0300
+Processing by PicsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pics_controller.rb:63:in `set_pic'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.1ms | Allocations: 852)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=styles):
+  
+app/controllers/pics_controller.rb:63:in `set_pic'
+Started GET "/pics" for 127.0.0.1 at 2026-01-15 18:43:17 -0300
+Processing by PicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics"[0m
+  ↳ app/views/pics/index.html.erb:6
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/_pic.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered pics/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1638)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1843)
+Completed 200 OK in 32ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 2181)
+
+
+Started GET "/uploads/ONPAJGOJ.png" for 127.0.0.1 at 2026-01-15 18:43:17 -0300
+Started GET "/uploads/WIDORUES" for 127.0.0.1 at 2026-01-15 18:43:17 -0300
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-15 18:43:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/ONPAJGOJ.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/WIDORUES"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2026-01-15 18:45:53 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 400)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 624)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-15 18:45:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-15 18:45:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-15 18:46:12 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"tchaikovsky", "q"=>"Violin Concerto in D major (II. Canzonetta)", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 425)
+Completed 200 OK in 23402ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 804)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-15 18:46:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-15 18:46:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-15 18:48:33 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"tchaikovsky", "q"=>"Violin Concerto in D major (II. Canzonetta)", "mysearch"=>"pic", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 417)
+Completed 200 OK in 8555ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 681)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-15 18:48:41 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-15 18:48:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2026-01-21 23:27:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 1151)
+Completed 200 OK in 360ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 5227)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-21 23:27:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-21 23:27:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started GET "/clips" for 127.0.0.1 at 2026-01-21 23:27:29 -0300
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (61.0ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:6
+  Rendered clips/index.html.erb within layouts/application (Duration: 230.6ms | Allocations: 8666)
+  Rendered layout layouts/application.html.erb (Duration: 231.7ms | Allocations: 8882)
+Completed 200 OK in 527ms (Views: 168.4ms | ActiveRecord: 64.5ms | Allocations: 17854)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-21 23:27:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips/4" for 127.0.0.1 at 2026-01-21 23:27:33 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mClip Load (0.3ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "4"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 710.0ms | Allocations: 9405)
+  Rendered clips/show.html.erb within layouts/application (Duration: 768.8ms | Allocations: 10295)
+  Rendered layout layouts/application.html.erb (Duration: 769.2ms | Allocations: 10499)
+Completed 200 OK in 815ms (Views: 769.1ms | ActiveRecord: 1.5ms | Allocations: 13091)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-21 23:27:34 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 854)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/" for 127.0.0.1 at 2026-01-22 23:59:38 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 2339)
+Completed 200 OK in 117ms (Views: 50.1ms | ActiveRecord: 0.0ms | Allocations: 6413)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-22 23:59:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-22 23:59:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:00:04 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"rhamsin", "q"=>"nos richesses", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.5ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 733)
+Completed 200 OK in 25040ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1122)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:00:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:00:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:00:43 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"rhamsin", "q"=>"nos richesses", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 504)
+Completed 200 OK in 14132ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 780)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:00:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:00:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:01:03 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"rhamsin", "q"=>"nos richesses", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 519)
+Completed 200 OK in 19251ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 812)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:01:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:01:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:01:42 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"rhamsin idk", "q"=>"nos richesses", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 522)
+Completed 200 OK in 15677ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 804)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:01:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:01:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:02:06 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"rhamsin idk", "q"=>"nos richesses dancehall", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 522)
+Completed 200 OK in 15623ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 803)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:02:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:02:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:03:16 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"", "q"=>"nos richesses dancehall kreyol", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 522)
+Completed 200 OK in 14490ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 799)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:03:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:03:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:03:33 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"", "q"=>"nos richesses dancehall kreyol", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 516)
+Completed 200 OK in 15409ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 807)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:03:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:03:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:03:51 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"", "q"=>"nos richesses dancehall kreyol", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 525)
+Completed 200 OK in 15706ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 806)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:04:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:04:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:04:29 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"web"=>"1", "composer"=>"", "q"=>"nos richesses dancehall ", "mysearch"=>"video", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 522)
+Completed 200 OK in 15216ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 807)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-01-23 00:04:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-01-23 00:04:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2026-01-23 00:05:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 502)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 726)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-23 00:05:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-23 00:05:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2026-01-23 00:10:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 237)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2357)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 6431)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-23 00:10:21 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-23 00:10:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-01-23 00:10:58 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"titre"=>"rhamsin - nos richesse dancehall", "lienvid"=>"qtCfiqt3UCI", "okHey"=>"Add video"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1217)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1304)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1640)
+
+
+  
+ActionView::Template::Error (undefined method `html_safe' for nil):
+    30:     </div>
+    31:   </header>
+    32:   <main>
+    33: <%=@results.html_safe%>
+    34:   </main>
+  
+app/views/home/search.html.erb:33
+Started GET "/" for 127.0.0.1 at 2026-01-23 00:11:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 237)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2372)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 6446)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-23 00:11:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-23 00:11:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started GET "/clips/new?titre=rhamsin+-+nos+richesse+dancehall&lienvid=qtCfiqt3UCI&okHey=Add+video" for 127.0.0.1 at 2026-01-23 00:11:32 -0300
+Processing by ClipsController#new as HTML
+  Parameters: {"titre"=>"rhamsin - nos richesse dancehall", "lienvid"=>"qtCfiqt3UCI", "okHey"=>"Add video"}
+  Rendering layout layouts/application.html.erb
+  Rendering clips/new.html.erb within layouts/application
+  Rendered clips/_form.html.erb (Duration: 22.7ms | Allocations: 2683)
+  Rendered clips/new.html.erb within layouts/application (Duration: 23.9ms | Allocations: 2962)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 3167)
+Completed 200 OK in 210ms (Views: 25.6ms | ActiveRecord: 2.2ms | Allocations: 18179)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-23 00:11:33 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 35ms (ActiveRecord: 0.2ms | Allocations: 3749)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started POST "/clips" for 127.0.0.1 at 2026-01-23 00:11:36 -0300
+Processing by ClipsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "clip"=>{"title"=>"rhamsin - nos richesse dancehall", "link"=>"qtCfiqt3UCI", "artist_id"=>"", "description"=>"", "sortie"=>""}, "commit"=>"Create Clip"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mArtist Load (30.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "rhamsin"], ["LIMIT", 1]]
+  ↳ app/models/clip.rb:15:in `myfunc'
+  [1m[36mClip Create (0.4ms)[0m  [1m[32mINSERT INTO "clips" ("title", "link", "artist_id", "description", "sortie", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "rhamsin - nos richesse dancehall"], ["link", "qtCfiqt3UCI"], ["artist_id", nil], ["description", "EN HOMMAGE À MONSIEUR EDGAR NIBUL ET LA LYRE CAYENNAISE QUI ONT INSPIRÉ CETTE CHANSON. NOS PLUS SINCÈRES REMERCIEMENTS.\nTélécharge gratuitement Nos Richesses en cliquant sur ce lien: https://www.mediafire.com/file/puql2p547q46kos/Rhamsin_feat_Idk_-_Nos_richesses.mp3/file"], ["sortie", "2023-08-14"], ["created_at", "2026-01-23 03:11:37.736861"], ["updated_at", "2026-01-23 03:11:37.736861"], ["image", "https://img.youtube.com/vi/qtCfiqt3UCI/mqdefault.jpg"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["name", "rhamsin"], ["created_at", "2026-01-23 03:11:37.741215"], ["updated_at", "2026-01-23 03:11:37.741215"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mClip::HABTM_Artists Create (0.2ms)[0m  [1m[32mINSERT INTO "cliphasartists" ("clip_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["clip_id", "10"], ["artist_id", "9"], ["created_at", "2026-01-23 03:11:37.745120"], ["updated_at", "2026-01-23 03:11:37.745120"]]
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (80.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clips_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/clips/10
+Completed 302 Found in 1370ms (ActiveRecord: 114.3ms | Allocations: 20642)
+
+
+Started GET "/clips/10" for 127.0.0.1 at 2026-01-23 00:11:37 -0300
+Processing by ClipsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "10"]]
+  ↳ app/views/clips/_clip.html.erb:16:in `map'
+  Rendered clips/_clip.html.erb (Duration: 5.8ms | Allocations: 2157)
+  Rendered clips/show.html.erb within layouts/application (Duration: 48.2ms | Allocations: 3130)
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 3334)
+Completed 200 OK in 61ms (Views: 49.5ms | ActiveRecord: 0.4ms | Allocations: 4043)
+
+
+Started GET "/clips/styles.css" for 127.0.0.1 at 2026-01-23 00:11:37 -0300
+Processing by ClipsController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mClip Load (0.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:63:in `set_clip'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 822)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'=styles):
+  
+app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/" for 127.0.0.1 at 2026-01-23 00:14:21 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 508)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 732)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-01-23 00:14:21 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-01-23 00:14:21 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
