@@ -1,0 +1,2 @@
+class MusicalPiece < ApplicationRecord
+end

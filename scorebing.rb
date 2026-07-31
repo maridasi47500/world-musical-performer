@@ -12,7 +12,8 @@ agent = Mechanize.new
 @driver.navigate.to "https://www.bing.com"
 
 def search_bing(song, artist)
-  query = "list of works by #{artist}"
+  #query = "list of works by #{artist}"
+  query = "list of compositions by #{artist}"
   @driver.navigate.to "https://www.bing.com"
 
   # Wait for the results to load

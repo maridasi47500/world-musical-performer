@@ -7,6 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+x=File.read("piecesmusicales.hey")
+x.split("\n\n").map{|g|g.strip.squish.gsub(/(?:-[ @][@.0-9]([0-9])[0-9]).+/, "")}.each do |z|
+     MusicalPiece.find_or_create_by!(name: z)
+end
+
+
 Musicalinstrument.find_or_create_by!(name: "violin", description: "violin/violon")
 Musicalinstrument.find_or_create_by!(name: "piano", description: "piano/klavier")
 Musicalinstrument.find_or_create_by!(name: "trombone", description: "trombone")
