@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
  <form action="/home/search" method="post" target="_blank">
     <div class="search-bar">
-<b style="colo:green;">REMPLIR ARTISTE ICI pour trouver la partition</b>
+<b style="color:green;">REMPLIR ARTISTE ICI pour trouver la partition</b>
       <input type="text" name="composer" placeholder="Search composer/ARTIST">
  <input style="width:100%;" type="text" name="q" value="<%=@musical_piece.name%>" placeholder="Search song or score Title">
 <label for="searchscores">
+<b style="color:green;">ICI essaye d'écrire le titre comme pour trouver la partition</b>
 chercher scores
       <input type="radio" checked name="mysearch" value="scores" id="searchscores" />
 </label>
@@ -22,6 +23,7 @@ chercher 1 video
 
 
 <%= render @musical_piece %>
+<%= link_to "chercher sur google le compositeur de #{@musical_piece.name}", "https://www.google.com/search?q=#{@musical_piece.name.gsub(' ','+')}", target: "_blank" %>
 
 <div>
   <%= link_to "Edit this musical piece", edit_musical_piece_path(@musical_piece) %> |

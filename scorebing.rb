@@ -24,8 +24,10 @@ def search_bing(song, artist)
   search_box = @driver.find_element(name: 'q')
   search_box.send_keys(query)
   search_box.submit
+  p "\nquery sent"
   
   wait.until { @driver.find_element(css: 'li.b_algo') }
+  p "\nresults displayed"
   
   # Scrape the results
   results = []
@@ -39,31 +41,41 @@ def search_bing(song, artist)
     
     link_element = li
 
-    if title.include?("List of works")
-      @driver.navigate.to url
-      doc1 = Nokogiri::HTML(@driver.page_source)
-      wait.until { @driver.find_element(:id=>"firstHeading") }
-      @driver.find_elements(:tag_name, "a").each do |mylink|
-          hello=false
-          song.downcase.split(" ").each do |wow|
-              #p mylink.attribute("href")
-              next if mylink.attribute("href").nil?
-              if mylink.attribute("href").scan(/#{wow.split('').map{|h|"[#{h.downcase}#{h.upcase}]"}.join('')}/).length > 0
-                  hello=true
+    if title.include?('Collected Works') or title.include?("Category:") or title.include?("List of works by") or title.include?("List of compositions by")
+      begin
+        @driver.navigate.to url
+        doc1 = Nokogiri::HTML(@driver.page_source)
+        p "look for first heading"
+        wait.until { @driver.find_element(:id=>"firstHeading") }
+        p "found first heading"
+        @driver.find_elements(:tag_name, "a").each do |mylink|
+            hello=false
+            p mylink.text
+            x1=song.downcase.gsub("(","").gsub(")","").to_s.split(" ")
+            #x2=mylink.text.to_s.downcase.to_s.split(" ")
+            x2=mylink.attribute("href").to_s.split("wiki/")[1].to_s.downcase.gsub("(","").gsub(")","").to_s.split("_")
+            #song.downcase.split(" ").each do |wow|
+            #    #p mylink.attribute("href")
+            #    next if mylink.attribute("href").nil?
+            #    if mylink.attribute("href").scan(/#{wow.split('').map{|h|"[#{h.downcase}#{h.upcase}]"}.join('')}/).length > 0
+            #        hello=true
 
-              end
-              #p "$('a').toArray().filter((x) => (new RegExp('(#{wow.split('').map{|h|"[#{h.downcase}#{h.upcase}]"}.join('')})', 'i')).test(x.href)).map(x=>window.open(x))"
-              #@driver.execute_script("$('a').toArray().filter((x) => (new RegExp('(#{wow.split("").map{|h|"[#{h.downcase}#{h.upcase}]"}.join("")})', 'i')).test(x.href)).map(x=>window.open(x))")
-              #sleep 0.5
-          end
-          if hello == true
-              inner_html = "<a href=\"#{mylink.attribute("href")}\">#{mylink.text}</a>"
-              results << {
-                title: mylink.text,
-                url: mylink.attribute("href"),
-                inner_html: inner_html
-              }
-          end
+            #    end
+            #end
+            #if hello == true
+            #p [mylink.text,(x1 & x2)]
+            if mylink.attribute("href").include?("imslp") and (x1 & x2).length > 0
+                inner_html = "<a href=\"#{mylink.attribute("href")}\">#{mylink.text}</a>"
+                results << {
+                  title: mylink.text,
+                  url: mylink.attribute("href"),
+                  inner_html: inner_html
+                }
+            end
+        end
+      rescue  => e
+        p "******************* next link *************************"
+        p e.message
       end
 
       #puts a_tag
