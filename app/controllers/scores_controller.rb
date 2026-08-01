@@ -12,7 +12,7 @@ class ScoresController < ApplicationController
 
   # GET /scores/new
   def new
-    @score = Score.new
+    @score = Score.new(title: params[:titre], composer: params[:composer])
   end
 
   # GET /scores/1/edit
