@@ -11573,3 +11573,1801 @@ Completed 404 Not Found in 8ms (ActiveRecord: 0.2ms | Allocations: 823)
 ActiveRecord::RecordNotFound (Couldn't find Score with 'id'=styles):
   
 app/controllers/scores_controller.rb:63:in `set_score'
+Started GET "/musical_pieces/1014" for 127.0.0.1 at 2026-08-01 17:00:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"1014"}
+  [1m[36mMusicalPiece Load (0.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 1014], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.3ms | Allocations: 171)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 27.5ms | Allocations: 2778)
+  [1m[36mMusicalPiece Load (6.4ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 16950)
+Completed 200 OK in 199ms (Views: 73.4ms | ActiveRecord: 11.5ms | Allocations: 34219)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-01 17:00:53 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms | Allocations: 857)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started GET "/musical_pieces/227" for 127.0.0.1 at 2026-08-01 17:00:58 +0200
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mMusicalPiece Load (0.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 227], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 582)
+  [1m[36mMusicalPiece Load (5.4ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 46.6ms | Allocations: 14368)
+Completed 200 OK in 54ms (Views: 42.7ms | ActiveRecord: 5.6ms | Allocations: 14970)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-01 17:00:59 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms | Allocations: 836)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started DELETE "/musical_pieces/1014" for 127.0.0.1 at 2026-08-01 17:01:08 +0200
+Processing by MusicalPiecesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1014"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 1014], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/musical_pieces_controller.rb:52:in `destroy'
+  [1m[36mMusicalPiece Destroy (4.6ms)[0m  [1m[31mDELETE FROM "musical_pieces" WHERE "musical_pieces"."id" = ?[0m  [["id", 1014]]
+  ↳ app/controllers/musical_pieces_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (68.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/musical_pieces_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/musical_pieces
+Completed 303 See Other in 91ms (ActiveRecord: 73.1ms | Allocations: 2387)
+
+
+Started GET "/musical_pieces" for 127.0.0.1 at 2026-08-01 17:01:08 +0200
+Processing by MusicalPiecesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/index.html.erb within layouts/application
+  [1m[36mMusicalPiece Load (8.9ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/musical_pieces/index.html.erb:6
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.4ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.9ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.4ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.5ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.5ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.8ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 2.0ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.6ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 2.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 2.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.7ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.3ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/index.html.erb within layouts/application (Duration: 1431.6ms | Allocations: 158996)
+  [1m[36mCACHE MusicalPiece Load (0.1ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 1462.8ms | Allocations: 167454)
+Completed 200 OK in 1485ms (Views: 1455.5ms | ActiveRecord: 8.9ms | Allocations: 167793)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-08-01 17:01:10 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/musical_pieces/227" for 127.0.0.1 at 2026-08-01 17:01:15 +0200
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 227], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 582)
+  [1m[36mMusicalPiece Load (5.7ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 14358)
+Completed 200 OK in 43ms (Views: 33.4ms | ActiveRecord: 5.8ms | Allocations: 14957)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-01 17:01:15 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 824)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started GET "/musical_pieces/472" for 127.0.0.1 at 2026-08-01 17:01:19 +0200
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"472"}
+  [1m[36mMusicalPiece Load (0.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 472], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 591)
+  [1m[36mMusicalPiece Load (5.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 14367)
+Completed 200 OK in 49ms (Views: 39.6ms | ActiveRecord: 5.6ms | Allocations: 14952)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-01 17:01:19 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 823)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started POST "/home/search" for 127.0.0.1 at 2026-08-01 17:01:45 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"composer"=>"paul hindemith", "q"=>"Harmony of the World symphony adapted. from the opera (1957) ", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 3.0ms | Allocations: 235)
+  [1m[36mMusicalPiece Load (16.1ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 14336)
+Completed 200 OK in 118736ms (Views: 179.3ms | ActiveRecord: 16.1ms | Allocations: 15173)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-08-01 17:03:44 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-08-01 17:03:46 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2026-08-03 23:54:21 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 237)
+  [1m[36mMusicalPiece Load (26.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 272.4ms | Allocations: 25854)
+Completed 200 OK in 527ms (Views: 293.3ms | ActiveRecord: 32.1ms | Allocations: 29936)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-08-03 23:54:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-08-03 23:54:23 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started GET "/musical_pieces/1093" for 127.0.0.1 at 2026-08-03 23:54:47 +0200
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"1093"}
+  [1m[36mMusicalPiece Load (0.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 1093], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.5ms | Allocations: 153)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 108.4ms | Allocations: 1234)
+  [1m[36mMusicalPiece Load (8.4ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 146.8ms | Allocations: 15011)
+Completed 200 OK in 259ms (Views: 141.6ms | ActiveRecord: 8.8ms | Allocations: 17773)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-03 23:54:47 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 852)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started POST "/home/search" for 127.0.0.1 at 2026-08-04 00:03:40 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"composer"=>"johann strauss", "q"=>"Eljen a Magyar! [= Long Live Hungary), Polka schnell Op. 332 (1869) ", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 2.8ms | Allocations: 347)
+  [1m[36mMusicalPiece Load (7.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 148.2ms | Allocations: 27028)
+Completed 200 OK in 160831ms (Views: 149.9ms | ActiveRecord: 12.5ms | Allocations: 33331)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-08-04 00:06:21 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-08-04 00:06:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started POST "/home/search" for 127.0.0.1 at 2026-08-04 00:08:21 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#search as HTML
+  Parameters: {"composer"=>"johann strauss", "q"=>"Eljen a Magyar! [= Long Live Hungary), Polka schnell Op. 332 (1869) ", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 5.3ms | Allocations: 347)
+  [1m[36mMusicalPiece Load (7.1ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 155.6ms | Allocations: 27016)
+Completed 200 OK in 103476ms (Views: 158.5ms | ActiveRecord: 13.3ms | Allocations: 33166)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-08-04 00:10:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-08-04 00:10:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/ajouterscore.php?composer=johann%20strauss&lien=https://imslp.org/wiki/Eljen_a_Magyar,_Op.332_(Strauss_Jr.,_Johann)&titre=Eljen%20a%20Magyar!,%20Schnell-Polka" for 127.0.0.1 at 2026-08-04 00:11:51 +0200
+Processing by ScoresController#new as HTML
+  Parameters: {"composer"=>"johann strauss", "lien"=>"https://imslp.org/wiki/Eljen_a_Magyar,_Op.332_(Strauss_Jr.,_Johann)", "titre"=>"Eljen a Magyar!, Schnell-Polka"}
+  Rendering layout layouts/application.html.erb
+  Rendering scores/new.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.3ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments"[0m
+  ↳ app/views/scores/_form.html.erb:26:in `collect'
+  Rendered scores/_form.html.erb (Duration: 72.7ms | Allocations: 7040)
+  Rendered scores/new.html.erb within layouts/application (Duration: 96.5ms | Allocations: 7319)
+  [1m[36mMusicalPiece Load (8.1ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 175.8ms | Allocations: 21099)
+Completed 200 OK in 260ms (Views: 168.9ms | ActiveRecord: 10.6ms | Allocations: 27680)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-08-04 00:11:51 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started POST "/scores" for 127.0.0.1 at 2026-08-04 00:11:56 +0200
+Processing by ScoresController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "score"=>{"title"=>"Eljen a Magyar!, Schnell-Polka", "composer"=>"johann strauss", "musicalinstrument_id"=>"1", "link"=>"https://imslp.org/wiki/Eljen_a_Magyar,_Op.332_(Strauss_Jr.,_Johann)", "scores"=>""}, "commit"=>"Create Score"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mMusicalinstrument Load (15.9ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mScore Create (1.5ms)[0m  [1m[32mINSERT INTO "scores" ("title", "composer", "musicalinstrument_id", "scores", "created_at", "updated_at", "link") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Eljen a Magyar!, Schnell-Polka"], ["composer", "johann strauss"], ["musicalinstrument_id", "1"], ["scores", ""], ["created_at", "2026-08-03 22:11:56.502355"], ["updated_at", "2026-08-03 22:11:56.502355"], ["link", "https://imslp.org/wiki/Eljen_a_Magyar,_Op.332_(Strauss_Jr.,_Johann)"]]
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (45.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/scores_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/scores/7
+Completed 302 Found in 33097ms (ActiveRecord: 62.9ms | Allocations: 8317)
+
+
+Started GET "/scores/7" for 127.0.0.1 at 2026-08-04 00:12:29 +0200
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mScore Load (0.4ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+  Rendering layout layouts/application.html.erb
+  Rendering scores/show.html.erb within layouts/application
+  [1m[36mMusicalinstrument Load (0.5ms)[0m  [1m[34mSELECT "musicalinstruments".* FROM "musicalinstruments" WHERE "musicalinstruments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/scores/_score.html.erb:14
+  Rendered scores/_score.html.erb (Duration: 9.9ms | Allocations: 717)
+  Rendered scores/show.html.erb within layouts/application (Duration: 38.1ms | Allocations: 3558)
+  [1m[36mMusicalPiece Load (7.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 78.2ms | Allocations: 17334)
+Completed 200 OK in 106ms (Views: 71.8ms | ActiveRecord: 8.1ms | Allocations: 18735)
+
+
+Started GET "/scores/styles.css" for 127.0.0.1 at 2026-08-04 00:12:29 +0200
+Processing by ScoresController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mScore Load (0.2ms)[0m  [1m[34mSELECT "scores".* FROM "scores" WHERE "scores"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/scores_controller.rb:63:in `set_score'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 866)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Score with 'id'=styles):
+  
+app/controllers/scores_controller.rb:63:in `set_score'
+Started GET "/musical_pieces/248" for 127.0.0.1 at 2026-08-04 00:12:30 +0200
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"248"}
+  [1m[36mMusicalPiece Load (2.9ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 248], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 5.2ms | Allocations: 873)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 35.1ms | Allocations: 9074)
+  [1m[36mMusicalPiece Load (45.0ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 192.3ms | Allocations: 26222)
+Completed 200 OK in 241ms (Views: 166.8ms | ActiveRecord: 49.0ms | Allocations: 34281)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-04 00:12:31 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms | Allocations: 845)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started GET "/musical_pieces/784" for 127.0.0.1 at 2026-08-04 00:12:34 +0200
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"784"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 784], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 545)
+  [1m[36mMusicalPiece Load (5.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 14321)
+Completed 200 OK in 59ms (Views: 49.1ms | ActiveRecord: 5.5ms | Allocations: 14907)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-04 00:12:35 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 823)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started GET "/musical_pieces/311" for 127.0.0.1 at 2026-08-04 00:12:37 +0200
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"311"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 311], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 528)
+  [1m[36mMusicalPiece Load (6.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 14304)
+Completed 200 OK in 56ms (Views: 44.6ms | ActiveRecord: 6.7ms | Allocations: 14901)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-04 00:12:38 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.2ms | Allocations: 823)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started POST "/home/search" for 127.0.0.1 at 2026-08-04 00:13:27 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"composer"=>"Antonín Dvořák", "q"=>"No. 8 (old numbering system: No. 4) in G major, Op. 88 = B. 163 (1889) ", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+  [1m[36mMusicalPiece Load (11.7ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 131.3ms | Allocations: 14085)
+Completed 200 OK in 143589ms (Views: 121.4ms | ActiveRecord: 11.6ms | Allocations: 14701)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-08-04 00:15:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-08-04 00:15:51 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  
+Started GET "/" for 127.0.0.1 at 2026-08-04 23:51:27 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 237)
+  [1m[36mMusicalPiece Load (78.4ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 347.2ms | Allocations: 25870)
+Completed 200 OK in 470ms (Views: 306.0ms | ActiveRecord: 91.5ms | Allocations: 29950)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-08-04 23:51:28 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-08-04 23:51:28 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started GET "/musical_pieces/73" for 127.0.0.1 at 2026-08-04 23:51:31 +0200
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mMusicalPiece Load (0.4ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.5ms | Allocations: 153)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 53.4ms | Allocations: 1247)
+  [1m[36mMusicalPiece Load (6.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 15024)
+Completed 200 OK in 178ms (Views: 85.5ms | ActiveRecord: 6.8ms | Allocations: 17845)
+
+
+Started GET "/musical_pieces/styles.css" for 127.0.0.1 at 2026-08-04 23:51:31 +0200
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id"=>"styles"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.2ms | Allocations: 852)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'=styles):
+  
+app/controllers/musical_pieces_controller.rb:63:in `set_musical_piece'
+Started POST "/home/search" for 127.0.0.1 at 2026-08-04 23:51:54 +0200
+Processing by HomeController#search as HTML
+  Parameters: {"composer"=>"beethoven", "q"=>"Coriolan Overture in C minor, Op. 62 (1807) ", "mysearch"=>"scores", "ok3"=>"search"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 83.4ms | Allocations: 235)
+  [1m[36mMusicalPiece Load (417.0ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 616.4ms | Allocations: 14296)
+Completed 200 OK in 185028ms (Views: 255.0ms | ActiveRecord: 416.9ms | Allocations: 15397)
+
+
+Started GET "/home/styles.css" for 127.0.0.1 at 2026-08-04 23:55:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/styles.css"):
+  
+Started GET "/home/google-logo.png" for 127.0.0.1 at 2026-08-04 23:55:02 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/google-logo.png"):
+  

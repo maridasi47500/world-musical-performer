@@ -24,10 +24,10 @@ def search_bing(song, artist)
   search_box = @driver.find_element(name: 'q')
   search_box.send_keys(query)
   search_box.submit
-  p "\nquery sent"
+  #p "\nquery sent"
   
   wait.until { @driver.find_element(css: 'li.b_algo') }
-  p "\nresults displayed"
+  #p "\nresults displayed"
   
   # Scrape the results
   results = []
@@ -45,12 +45,12 @@ def search_bing(song, artist)
       begin
         @driver.navigate.to url
         doc1 = Nokogiri::HTML(@driver.page_source)
-        p "look for first heading"
+        #p "look for first heading"
         wait.until { @driver.find_element(:id=>"firstHeading") }
-        p "found first heading"
+        #p "found first heading"
         @driver.find_elements(:tag_name, "a").each do |mylink|
             hello=false
-            p mylink.text
+            #p mylink.text
             x1=song.downcase.gsub("(","").gsub(")","").to_s.split(" ")
             #x2=mylink.text.to_s.downcase.to_s.split(" ")
             x2=mylink.attribute("href").to_s.split("wiki/")[1].to_s.downcase.gsub("(","").gsub(")","").to_s.split("_")
@@ -64,7 +64,8 @@ def search_bing(song, artist)
             #end
             #if hello == true
             #p [mylink.text,(x1 & x2)]
-            if mylink.attribute("href").include?("imslp") and (x1 & x2).length > 0
+            #if mylink.attribute("href").include?("imslp") and (x1 & x2).length > 0
+            if (x1 & x2).length > 0
                 inner_html = "<a href=\"#{mylink.attribute("href")}\">#{mylink.text}</a>"
                 results << {
                   title: mylink.text,
@@ -87,7 +88,7 @@ def search_bing(song, artist)
   end
   
   # Output the results
-  results.each do |result|
+  results.sort_by {|g|g[:url].include?("imslp") ? 0 : 1 }.each do |result|
     puts "<p>Title: #{result[:title]}</p>"
     puts "<p>URL: #{result[:url]}</p>"
 
