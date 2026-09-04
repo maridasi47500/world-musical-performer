@@ -33,11 +33,53 @@ div.sub, iframe {
 <%=link_to "videos", clips_path%>
 <%=link_to "scores", scores_path%>
 <%=link_to "pics", pics_path%>
-<span>
-  ajoute un nouveau clip <%= render "clips/form1", clip: Clip.new %>
+<%=link_to "ajouter un nouveau clip", "", onclick: "on();return false;"%>
 
-</span>
-<br>
+ <style>
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  width: 50%;height:50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  background: black;
+}
+      #overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+</style>
+<!-- onclick="(overlay.dataset.mydata === '0' ? off() : console.log(''));return false;" --> 
+<div id="overlay"   data-mydata="0">
+  <div id="text" onmouseleave="overlay.dataset.mydata='0';return false;" onmouseenter="overlay.dataset.mydata='1';return false;">
+    ajoute un nouveau clip <span onclick="off(); return false;">[X] fermer</span>
+
+    <%= render "clips/form1", clip: Clip.new %>
+
+    </div>
+</div>
+  <script>
+     function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+  overlay.dataset.mydata='0';
+}
+  </script>
 <hr>
     <%= yield %>
 </body>

@@ -1,12 +1,12 @@
 <%= form_with(model: clip) do |form| %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title, value: params[:titre], style: "height:100px;width:100%;" %>
+    <%= form.label :title, style: "display: inline-block" %>
+    <%= form.text_field :title, value: params[:titre], style: "height:100px;" %>
   </div>
 
   <div>
-    <%= form.label :link, style: "display: block" %>
+    <%= form.label :link, style: "display: inline-block" %>
     <span>https://youtube.com/?v=</span>
     <%= form.text_field :link, value: params[:lienvid] %>
   </div>
