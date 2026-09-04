@@ -1,0 +1,18 @@
+<%= form_with(model: clip) do |form| %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title, value: params[:titre], style: "height:100px;width:100%;" %>
+  </div>
+
+  <div>
+    <%= form.label :link, style: "display: block" %>
+    <span>https://youtube.com/?v=</span>
+    <%= form.text_field :link, value: params[:lienvid] %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+

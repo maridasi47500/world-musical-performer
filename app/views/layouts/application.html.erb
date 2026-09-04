@@ -33,6 +33,10 @@ div.sub, iframe {
 <%=link_to "videos", clips_path%>
 <%=link_to "scores", scores_path%>
 <%=link_to "pics", pics_path%>
+<span>
+  ajoute un nouveau clip <%= render "clips/form1", clip: Clip.new %>
+
+</span>
 <br>
 <hr>
     <%= yield %>

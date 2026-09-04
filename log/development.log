@@ -15531,3 +15531,23 @@ Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 827)
 ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
   
 app/controllers/clips_controller.rb:63:in `set_clip'
+Started GET "/" for 127.0.0.1 at 2026-09-04 23:44:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 237)
+  [1m[36mMusicalPiece Load (5.7ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:31
+  Rendered layout layouts/application.html.erb (Duration: 181.7ms | Allocations: 25835)
+Completed 200 OK in 225ms (Views: 178.1ms | ActiveRecord: 9.5ms | Allocations: 29967)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2026-09-04 23:44:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/google-logo.png" for 127.0.0.1 at 2026-09-04 23:44:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
