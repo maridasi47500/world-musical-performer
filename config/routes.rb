@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "hello/there"
   resources :musical_pieces
   resources :scores
   resources :pics

@@ -1,0 +1,17 @@
+<h1>Hello there</h1>
+<%@videos.each do |x|%>
+  <div>
+  <%x=x.as_json%>
+  <p><%=x["id"]%></p>
+
+
+  
+  <p><%=x["snippet"]["data"]["title"]%></p>
+  <p><img src="<%=x["snippet"]["data"]["thumbnails"]["default"]["url"]%>"/></p>
+  <p>
+    ajoute un nouveau clip 
+
+    <%= render "clips/form1", clip: Clip.new(title: x["snippet"]["data"]["title"], link: x["id"]) %>
+  </p>
+  </div>
+<%end%>
