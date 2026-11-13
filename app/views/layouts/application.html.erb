@@ -10,6 +10,8 @@
     <%= csp_meta_tag %>
 
     <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
 <style>
 
 .allclips {
@@ -22,6 +24,33 @@ div.sub, iframe {
 	width: 467px;
 	height: 265px;
 	margin: 0 auto;
+}
+.picartist {
+	position: relative;
+	width: min-content;
+}
+.picartist span {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-size: 42px;
+	text-align: center;
+	width: 100%;
+  -webkit-text-stroke: 2px green;
+}
+
+td.contentpic {
+		width:100%;
+}
+td.contentpic * {
+  float:left;
+}
+td.mytitle {
+	width:100px;
+}
+
+td {
+	border: 1px solid;
 }
 
 </style>
@@ -38,9 +67,9 @@ div.sub, iframe {
  <style>
 #text{
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   width: 50%;height:50%;
   transform: translate(-50%,-50%);
@@ -82,6 +111,8 @@ function off() {
   </script>
 <hr>
     <%= yield %>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
 </html>
 

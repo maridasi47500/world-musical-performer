@@ -1,0 +1,75 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Artisthastechniques" %>
+
+<h1>Artisthastechniques</h1>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  var difficulty=ev.target.id.replace("div","");
+  $.ajax({url: "/artisthastechniques/"+data.replace("drag","")+".json", type: "patch", data: {artisthastechnique: {difficulty: difficulty}}, success: function(hey){console.log(hey, 'ok');}});
+}
+</script>
+</head>
+<body>
+<%@all=@artisthastechniques.group_by{|h|h.difficulty.to_s}%>
+
+
+<p>quel artist a quelle technique et cette technique a quelle difficulté ?</p>
+
+<%@years={"A"=> "3 mois", "B"=> "6 mois", "C"=> "1 an", "D"=> "2 ans", "E"=> "3 ans", "F"=> "4 ans", "G"=> "5 ans et plus"}%>
+<table>
+<%("A".."G").to_a.reverse.each do |x|%>
+  <tr>
+
+    <td class="mytitle"><%=x%> (<%=@years[x]%> pour apprendre cette technique)</td>
+    <td id="div<%=x%>" class="contentpic" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <%@all[x].to_a.each do |h|%>
+  <div id="drag<%=h.id%>" class="picartist" draggable="true" ondragstart="drag(event)">
+  <img src="<%=h.artist.clips[0].image%>" width="336" height="120"/>
+  <span><%=h.technique_name%></span>
+  </div>
+      <%end%>
+
+    </td>
+  <tr>
+<%end%>
+</table>
+
+      <%@all[""].to_a.each do |h|%>
+
+
+  <div id="drag<%=x.id%>" class="picartist" draggable="true" ondragstart="drag(event)">
+  <img src="<%=x.artist.clips[0].image%>" width="336" height="120"/>
+  <span><%=x.technique_name%></span>
+  </div>
+<%end%>
+
+<div id="artisthastechniques">
+  <% @artisthastechniques.each do |artisthastechnique| %>
+    <%= render artisthastechnique %>
+    <p>
+      <%= link_to "Show this artisthastechnique", artisthastechnique %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New artisthastechnique", new_artisthastechnique_path %>

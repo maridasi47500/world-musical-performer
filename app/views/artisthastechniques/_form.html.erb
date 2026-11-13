@@ -1,0 +1,35 @@
+<%= form_with(model: artisthastechnique) do |form| %>
+  <% if artisthastechnique.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(artisthastechnique.errors.count, "error") %> prohibited this artisthastechnique from being saved:</h2>
+
+      <ul>
+        <% artisthastechnique.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.hidden_field :artist_id %>
+  </div>
+  <div class="picartist">
+<input
+  type="image"
+  id="image"
+  alt="submit"
+  src="<%=@clip.try(:image)%>" />
+  <span><%=artisthastechnique.technique_name%></span>
+  </div>
+  
+
+  <div>
+    <%= form.hidden_field :technique_name %>
+  </div>
+
+  <div>
+    <%= form.hidden_field :difficulty %>
+  </div>
+
+<% end %>

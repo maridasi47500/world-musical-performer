@@ -1,0 +1,10 @@
+<p>
+est-ce que 
+<%=@clip.artists.pluck(:name).to_sentence%>
+ont bien la technique de 
+<%techniquename=@clip.title.split("-").last%>
+<%=techniquename%>
+  </p>
+<%@clip.artists.each do |hey|%>
+  <%=render "artisthastechniques/form", artisthastechnique: Artisthastechnique.new(artist_id: hey.id, technique_name: techniquename)%>
+<%end%>

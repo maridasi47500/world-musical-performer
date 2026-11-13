@@ -1,0 +1,11 @@
+
+<%@clip.artists.each do |hey|%>
+<p>
+est-ce que 
+<%=hey.name%>
+a bien la technique de 
+<%techniquename=@clip.title.split("-").last%>
+<%=techniquename%>
+  </p>
+  <%=render "artisthastechniques/form", artisthastechnique: Artisthastechnique.new(artist_id: hey.id, technique_name: techniquename)%>
+<%end%>

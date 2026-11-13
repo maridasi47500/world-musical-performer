@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  resources :artisthastechniques
   get "hello/there"
   resources :musical_pieces
   resources :scores
   resources :pics
   resources :artists
-  resources :clips
+  resources :clips do
+    member do
+      get "anartisthasatechnique"
+    end
+  end
   
   get 'ajouterscore.php', to: "scores#new"
   get 'ajouterpic.php', to: "pics#new"

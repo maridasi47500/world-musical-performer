@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_07_31_220402) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_13_085412) do
+  create_table "artisthastechniques", force: :cascade do |t|
+    t.integer "artist_id", null: false
+    t.string "technique_name"
+    t.string "difficulty"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_artisthastechniques_on_artist_id"
+  end
+
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -66,4 +75,5 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_31_220402) do
     t.string "link"
   end
 
+  add_foreign_key "artisthastechniques", "artists"
 end

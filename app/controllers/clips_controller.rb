@@ -1,5 +1,7 @@
 class ClipsController < ApplicationController
-  before_action :set_clip, only: %i[ show edit update destroy ]
+  before_action :set_clip, only: %i[ show edit update destroy anartisthasatechnique]
+  def anartisthasatechnique
+  end
 
   # GET /clips or /clips.json
   def index

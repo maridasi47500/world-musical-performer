@@ -1,0 +1,70 @@
+class ArtisthastechniquesController < ApplicationController
+  before_action :set_artisthastechnique, only: %i[ show edit update destroy ]
+
+  # GET /artisthastechniques or /artisthastechniques.json
+  def index
+    @artisthastechniques = Artisthastechnique.all
+  end
+
+  # GET /artisthastechniques/1 or /artisthastechniques/1.json
+  def show
+  end
+
+  # GET /artisthastechniques/new
+  def new
+    @artisthastechnique = Artisthastechnique.new
+  end
+
+  # GET /artisthastechniques/1/edit
+  def edit
+  end
+
+  # POST /artisthastechniques or /artisthastechniques.json
+  def create
+    @artisthastechnique = Artisthastechnique.new(artisthastechnique_params)
+
+    respond_to do |format|
+      if @artisthastechnique.save
+        format.html { redirect_to @artisthastechnique, notice: "Artisthastechnique was successfully created." }
+        format.json { render :show, status: :created, location: @artisthastechnique }
+      else
+        format.html { render :new, status: :unprocessable_content }
+        format.json { render json: @artisthastechnique.errors, status: :unprocessable_content }
+      end
+    end
+  end
+
+  # PATCH/PUT /artisthastechniques/1 or /artisthastechniques/1.json
+  def update
+    respond_to do |format|
+      if @artisthastechnique.update(artisthastechnique_params)
+        format.html { redirect_to @artisthastechnique, notice: "Artisthastechnique was successfully updated.", status: :see_other }
+        format.json { render :show, status: :ok, location: @artisthastechnique }
+      else
+        format.html { render :edit, status: :unprocessable_content }
+        format.json { render json: @artisthastechnique.errors, status: :unprocessable_content }
+      end
+    end
+  end
+
+  # DELETE /artisthastechniques/1 or /artisthastechniques/1.json
+  def destroy
+    @artisthastechnique.destroy!
+
+    respond_to do |format|
+      format.html { redirect_to artisthastechniques_path, notice: "Artisthastechnique was successfully destroyed.", status: :see_other }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_artisthastechnique
+      @artisthastechnique = Artisthastechnique.find(params.expect(:id))
+    end
+
+    # Only allow a list of trusted parameters through.
+    def artisthastechnique_params
+      params.expect(artisthastechnique: [ :artist_id, :technique_name, :difficulty ])
+    end
+end

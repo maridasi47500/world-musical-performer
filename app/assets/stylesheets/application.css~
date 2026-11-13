@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.logo {
+  margin: 50px auto;
+  width: 200px;
+}
+
+.search-bar {
+  margin: 20px auto;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+}
+
+.search-bar button {
+  margin: 5px;
+  padding: 10px 20px;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+.result {
+  margin-bottom: 20px;
+}
+
+.result h3 a {
+  text-decoration: none;
+  color: #1a0dab;
+}
+
+.result p {
+  margin: 5px 0;
+}
+
+.result span {
+  color: #006621;
+}
+
+.picartist {
+	position: relative;
+	width: min-content;
+}
+.picartist span {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-size: 42px;
+	text-align: center;
+	width: 100%;
+  -webkit-text-stroke: 2px green;
+}
+
+table {
+		width:100%;
+	tr {
+
+		width:100%;
+	}
+}
+td.contentpic {
+		width:100%;
+}
+td.mytitle {
+	width:100px;
+}
+

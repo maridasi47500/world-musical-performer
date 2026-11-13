@@ -97,3 +97,31 @@ main {
   color: #006621;
 }
 
+.picartist {
+	position: relative;
+	width: min-content;
+}
+.picartist span {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-size: 42px;
+	text-align: center;
+	width: 100%;
+  -webkit-text-stroke: 2px green;
+}
+
+table {
+		width:100%;
+	tr {
+
+		width:100%;
+	}
+}
+td.contentpic {
+		width:100%;
+}
+td.mytitle {
+	width:100px;
+}
+

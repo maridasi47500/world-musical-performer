@@ -1,0 +1,32 @@
+<%= form_with(model: artisthastechnique) do |form| %>
+  <% if artisthastechnique.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(artisthastechnique.errors.count, "error") %> prohibited this artisthastechnique from being saved:</h2>
+
+      <ul>
+        <% artisthastechnique.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.hidden_field :artist_id %>
+    <%=artisthastechnique.artist.name%>
+  </div>
+  
+<%@years={"A"=> "3 mois", "B"=> "6 mois", "C"=> "1 an", "D"=> "2 ans", "E"=> "3 ans", "F"=> "4 ans", "G"=> "5 ans et plus"}%>
+  
+
+  <div>
+    <%= form.label :technique_name %>
+    <%= form.text_field :technique_name %>
+  </div>
+
+  <div>
+    <%= form.label :difficulty %>
+    <%= form.select :difficulty, [""]+("A".."G").to_a.map {|g|[@years[g], g]} %>
+  </div>
+
+<% end %>
