@@ -6,6 +6,7 @@ est-ce que
 a bien la technique de 
 <%techniquename=@clip.title.split("-").last%>
 <%=techniquename%>
-  </p>
+
   <%=render "artisthastechniques/form", artisthastechnique: Artisthastechnique.new(artist_id: hey.id, technique_name: techniquename)%>
 <%end%>
+  </p>

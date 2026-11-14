@@ -31011,3 +31011,564 @@ Started GET "/styles.css" for 127.0.0.1 at 2026-11-13 11:09:57 +0100
   
 ActionController::RoutingError (No route matches [GET] "/styles.css"):
   
+Generating image variants require the image_processing gem. Please add `gem "image_processing", "~> 1.2"` to your Gemfile or set `config.active_storage.variant_processor = :disabled`.
+Started GET "/" for ::1 at 2026-11-14 19:32:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (4.4ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:60
+  Rendered clips/_form1.html.erb (Duration: 59.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 584.4ms | GC: 0.0ms)
+Completed 200 OK in 1023ms (Views: 740.2ms | ActiveRecord: 6.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/google-logo.png" for ::1 at 2026-11-14 19:32:41 +0100
+Started GET "/styles.css" for ::1 at 2026-11-14 19:32:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips" for ::1 at 2026-11-14 19:32:49 +0100
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (2.6ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:6
+  Rendered clips/index.html.erb within layouts/application (Duration: 25.5ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (18.9ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:60
+  Rendered clips/_form1.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | GC: 15.6ms)
+Completed 200 OK in 105ms (Views: 48.8ms | ActiveRecord: 21.4ms (2 queries, 0 cached) | GC: 15.6ms)
+
+
+Started GET "/styles.css" for ::1 at 2026-11-14 19:32:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips/155" for ::1 at 2026-11-14 19:32:59 +0100
+Processing by ClipsController#show as HTML
+  Parameters: {"id" => "155"}
+  [1m[36mClip Load (0.3ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "155"]]
+  ↳ app/views/clips/_clip.html.erb:16:in 'Enumerable#map'
+  Rendered clips/_clip.html.erb (Duration: 301.1ms | GC: 0.0ms)
+  Rendered clips/show.html.erb within layouts/application (Duration: 346.6ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (1.7ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:60
+  Rendered clips/_form1.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 358.2ms | GC: 0.0ms)
+Completed 200 OK in 469ms (Views: 356.8ms | ActiveRecord: 2.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 19:33:00 +0100
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 19:35:53 +0100
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-14 19:35:53 +0100
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/clips/155" for ::1 at 2026-11-14 19:37:56 +0100
+Processing by ClipsController#show as HTML
+  Parameters: {"id" => "155"}
+  [1m[36mClip Load (0.3ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "155"]]
+  ↳ app/views/clips/_clip.html.erb:16:in 'Enumerable#map'
+  Rendered clips/_clip.html.erb (Duration: 28.9ms | GC: 0.0ms)
+  Rendered clips/show.html.erb within layouts/application (Duration: 36.4ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (2.6ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:60
+  Rendered clips/_form1.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 68.1ms | GC: 15.6ms)
+Completed 200 OK in 115ms (Views: 80.1ms | ActiveRecord: 7.5ms (3 queries, 0 cached) | GC: 15.6ms)
+
+
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 19:37:56 +0100
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-14 19:37:56 +0100
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.3ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/clips/155" for ::1 at 2026-11-14 19:39:32 +0100
+Processing by ClipsController#show as HTML
+  Parameters: {"id" => "155"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "155"]]
+  ↳ app/views/clips/_clip.html.erb:16:in 'Enumerable#map'
+  Rendered clips/_clip.html.erb (Duration: 27.8ms | GC: 0.0ms)
+  Rendered clips/show.html.erb within layouts/application (Duration: 35.3ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (3.6ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:65
+  Rendered clips/_form1.html.erb (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 71.8ms | GC: 0.0ms)
+Completed 200 OK in 116ms (Views: 79.1ms | ActiveRecord: 8.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 19:39:33 +0100
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-14 19:39:33 +0100
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/clips/155" for ::1 at 2026-11-14 19:40:29 +0100
+Processing by ClipsController#show as HTML
+  Parameters: {"id" => "155"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "155"]]
+  ↳ app/views/clips/_clip.html.erb:16:in 'Enumerable#map'
+  Rendered clips/_clip.html.erb (Duration: 37.7ms | GC: 0.0ms)
+  Rendered clips/show.html.erb within layouts/application (Duration: 42.8ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (2.1ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:65
+  Rendered clips/_form1.html.erb (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | GC: 0.0ms)
+Completed 200 OK in 112ms (Views: 72.0ms | ActiveRecord: 6.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 19:40:29 +0100
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-14 19:40:29 +0100
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/clips/155" for ::1 at 2026-11-14 19:41:03 +0100
+Processing by ClipsController#show as HTML
+  Parameters: {"id" => "155"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "155"]]
+  ↳ app/views/clips/_clip.html.erb:16:in 'Enumerable#map'
+  Rendered clips/_clip.html.erb (Duration: 36.1ms | GC: 0.0ms)
+  Rendered clips/show.html.erb within layouts/application (Duration: 55.8ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (1.7ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:66
+  Rendered clips/_form1.html.erb (Duration: 8.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 200.6ms | GC: 46.9ms)
+Completed 200 OK in 343ms (Views: 215.4ms | ActiveRecord: 9.0ms (3 queries, 0 cached) | GC: 46.9ms)
+
+
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 19:41:04 +0100
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-14 19:41:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.3ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Started GET "/clips/155" for ::1 at 2026-11-14 19:42:00 +0100
+Processing by ClipsController#show as HTML
+  Parameters: {"id" => "155"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "155"]]
+  ↳ app/views/clips/_clip.html.erb:16:in 'Enumerable#map'
+  Rendered clips/_clip.html.erb (Duration: 22.8ms | GC: 0.0ms)
+  Rendered clips/show.html.erb within layouts/application (Duration: 29.0ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (1.8ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | GC: 0.0ms)
+Completed 200 OK in 103ms (Views: 67.0ms | ActiveRecord: 6.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 19:42:01 +0100
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Started GET "/" for ::1 at 2026-11-14 21:34:44 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (7.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 71.8ms | GC: 15.6ms)
+Completed 200 OK in 114ms (Views: 77.4ms | ActiveRecord: 7.4ms (1 query, 0 cached) | GC: 15.6ms)
+
+
+Started GET "/styles.css" for ::1 at 2026-11-14 21:34:45 +0100
+Started GET "/google-logo.png" for ::1 at 2026-11-14 21:34:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+Started GET "/" for ::1 at 2026-11-14 21:34:45 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (2.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/google-logo.png" for ::1 at 2026-11-14 21:34:45 +0100
+Started GET "/styles.css" for ::1 at 2026-11-14 21:34:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/google-logo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips" for ::1 at 2026-11-14 21:34:53 +0100
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (1.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:6
+  Rendered clips/index.html.erb within layouts/application (Duration: 30.7ms | GC: 15.6ms)
+  [1m[36mMusicalPiece Load (2.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | GC: 15.6ms)
+Completed 200 OK in 106ms (Views: 58.0ms | ActiveRecord: 3.7ms (2 queries, 0 cached) | GC: 15.6ms)
+
+
+Started GET "/styles.css" for ::1 at 2026-11-14 21:34:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips" for ::1 at 2026-11-14 21:39:24 +0100
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (5.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:7
+  Rendered clips/index.html.erb within layouts/application (Duration: 45.6ms | GC: 15.6ms)
+  [1m[36mMusicalPiece Load (2.7ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 88.8ms | GC: 31.3ms)
+Completed 200 OK in 137ms (Views: 98.1ms | ActiveRecord: 9.6ms (2 queries, 0 cached) | GC: 31.3ms)
+
+
+Started GET "/styles.css" for ::1 at 2026-11-14 21:39:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips" for ::1 at 2026-11-14 21:40:09 +0100
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (7.1ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:7
+  Rendered clips/index.html.erb within layouts/application (Duration: 50.9ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (3.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 91.6ms | GC: 0.0ms)
+Completed 200 OK in 157ms (Views: 104.9ms | ActiveRecord: 12.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/styles.css" for ::1 at 2026-11-14 21:40:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips/122" for ::1 at 2026-11-14 21:40:49 +0100
+Processing by ClipsController#show as HTML
+  Parameters: {"id" => "122"}
+  [1m[36mClip Load (0.3ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 122], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "122"]]
+  ↳ app/views/clips/_clip.html.erb:16:in 'Enumerable#map'
+  Rendered clips/_clip.html.erb (Duration: 35.4ms | GC: 0.0ms)
+  Rendered clips/show.html.erb within layouts/application (Duration: 44.3ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (2.6ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 80.0ms | GC: 0.0ms)
+Completed 200 OK in 150ms (Views: 94.9ms | ActiveRecord: 10.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 21:40:50 +0100
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 13ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 15.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Started GET "/clips" for ::1 at 2026-11-14 21:40:53 +0100
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (1.7ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:7
+  Rendered clips/index.html.erb within layouts/application (Duration: 29.4ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (3.0ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | GC: 0.0ms)
+Completed 200 OK in 57ms (Views: 45.6ms | ActiveRecord: 4.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/styles.css" for ::1 at 2026-11-14 21:40:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips" for ::1 at 2026-11-14 21:40:57 +0100
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (0.9ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:7
+  Rendered clips/index.html.erb within layouts/application (Duration: 30.7ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (2.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | GC: 0.0ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 3.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/styles.css" for ::1 at 2026-11-14 21:40:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/clips" for ::1 at 2026-11-14 21:41:57 +0100
+Processing by ClipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clips/index.html.erb within layouts/application
+  [1m[36mClip Load (3.9ms)[0m  [1m[34mSELECT "clips".* FROM "clips"[0m
+  ↳ app/views/clips/index.html.erb:7
+  Rendered clips/index.html.erb within layouts/application (Duration: 40.6ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (2.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 80.9ms | GC: 15.6ms)
+Completed 200 OK in 129ms (Views: 92.0ms | ActiveRecord: 8.0ms (2 queries, 0 cached) | GC: 15.6ms)
+
+
+Started GET "/styles.css" for ::1 at 2026-11-14 21:41:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/musical_pieces/255" for ::1 at 2026-11-14 23:34:25 +0100
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id" => "255"}
+  [1m[36mMusicalPiece Load (7.0ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 255], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 28.7ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (3.9ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | GC: 0.0ms)
+Completed 200 OK in 154ms (Views: 62.6ms | ActiveRecord: 10.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/musical_pieces/styles.css" for ::1 at 2026-11-14 23:34:26 +0100
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mMusicalPiece Load (0.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'="styles"):
+  
+app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+Started GET "/musical_pieces/1222" for ::1 at 2026-11-14 23:34:30 +0100
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id" => "1222"}
+  [1m[36mMusicalPiece Load (0.3ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 1222], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (2.5ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 24.0ms | ActiveRecord: 2.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/musical_pieces/styles.css" for ::1 at 2026-11-14 23:34:30 +0100
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mMusicalPiece Load (0.4ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'="styles"):
+  
+app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+Started GET "/musical_pieces/31" for ::1 at 2026-11-14 23:34:47 +0100
+Processing by MusicalPiecesController#show as HTML
+  Parameters: {"id" => "31"}
+  [1m[36mMusicalPiece Load (0.4ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+  Rendering layout layouts/application.html.erb
+  Rendering musical_pieces/show.html.erb within layouts/application
+  Rendered musical_pieces/_musical_piece.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered musical_pieces/show.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (4.6ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 29.7ms | ActiveRecord: 4.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/musical_pieces/styles.css" for ::1 at 2026-11-14 23:34:47 +0100
+Processing by MusicalPiecesController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mMusicalPiece Load (0.2ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces" WHERE "musical_pieces"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MusicalPiece with 'id'="styles"):
+  
+app/controllers/musical_pieces_controller.rb:63:in 'MusicalPiecesController#set_musical_piece'
+Started POST "/clips" for ::1 at 2026-11-14 23:46:56 +0100
+Processing by ClipsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "clip" => {"title" => "hey", "link" => "PqF8Dzym_pY"}, "commit" => "Create Clip"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mBEGIN immediate TRANSACTION[0m
+  ↳ app/models/clip.rb:15:in 'Clip#myfunc'
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "hey"], ["LIMIT", 1]]
+  ↳ app/models/clip.rb:15:in 'Clip#myfunc'
+  [1m[36mClip Create (0.9ms)[0m  [1m[32mINSERT INTO "clips" ("title", "link", "artist_id", "description", "sortie", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "hey"], ["link", "PqF8Dzym_pY"], ["artist_id", nil], ["description", "Daniel-François-Esprit Auber\n\nWork: La Sirène, opéra comique in three acts, first performance 26 March 1844, Opéra-Comique, Paris.\n\nLibretto: Eugène Scribe\n\nOuverture\n\nOrchestra: Stockholms Strauss Orkester\n\nConductor: Sven Verde"], ["sortie", "2013-08-06"], ["created_at", "2026-11-14 22:46:56.884575"], ["updated_at", "2026-11-14 22:46:56.884575"], ["image", "https://img.youtube.com/vi/PqF8Dzym_pY/mqdefault.jpg"]]
+  ↳ app/controllers/clips_controller.rb:29:in 'block in ClipsController#create'
+  [1m[36mClip::HABTM_Artists Create (0.5ms)[0m  [1m[32mINSERT INTO "cliphasartists" ("clip_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["clip_id", "161"], ["artist_id", "74"], ["created_at", "2026-11-14 22:46:56.906247"], ["updated_at", "2026-11-14 22:46:56.906247"]]
+  ↳ app/controllers/clips_controller.rb:29:in 'block in ClipsController#create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/controllers/clips_controller.rb:29:in 'block in ClipsController#create'
+Redirected to http://localhost:3000/clips/161
+Completed 302 Found in 711ms (ActiveRecord: 32.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clips/161" for ::1 at 2026-11-14 23:46:56 +0100
+Processing by ClipsController#show as HTML
+  Parameters: {"id" => "161"}
+  [1m[36mClip Load (0.5ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", 161], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+  Rendering layout layouts/application.html.erb
+  Rendering clips/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "cliphasartists" ON "artists"."id" = "cliphasartists"."artist_id" WHERE "cliphasartists"."clip_id" = ?[0m  [["clip_id", "161"]]
+  ↳ app/views/clips/_clip.html.erb:16:in 'Enumerable#map'
+  Rendered clips/_clip.html.erb (Duration: 8.6ms | GC: 0.0ms)
+  Rendered clips/show.html.erb within layouts/application (Duration: 16.5ms | GC: 0.0ms)
+  [1m[36mMusicalPiece Load (2.7ms)[0m  [1m[34mSELECT "musical_pieces".* FROM "musical_pieces"[0m
+  ↳ app/views/layouts/application.html.erb:67
+  Rendered clips/_form1.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | GC: 0.0ms)
+Completed 200 OK in 59ms (Views: 43.7ms | ActiveRecord: 3.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clips/styles.css" for ::1 at 2026-11-14 23:46:57 +0100
+Processing by ClipsController#show as CSS
+  Parameters: {"id" => "styles"}
+  [1m[36mClip Load (0.2ms)[0m  [1m[34mSELECT "clips".* FROM "clips" WHERE "clips"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Clip with 'id'="styles"):
+  
+app/controllers/clips_controller.rb:65:in 'ClipsController#set_clip'

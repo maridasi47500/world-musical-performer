@@ -2,14 +2,20 @@
 
 <h1>Clips</h1>
 
-<div id="clips">
+<div class="row row-cols-1 md:row-cols-2 g-4">
+  
   <% @clips.each do |clip| %>
-
-    <p>
-    <%= clip.title %>
-    <%= image_tag clip.image, width:100, height:100 %>
+  <div class="col">
+    <div class="card">
+    <%= image_tag clip.image, class: "card-img-top", width:"70px", height:"150px" %>
+      <div class="card-body">
+        <h4 class="card-title"><%= clip.title %></h4>
       <%= link_to "Show this clip", clip %>
-    </p>
+      </div>
+    </div>
+  </div>
+    
+
   <% end %>
 </div>
 

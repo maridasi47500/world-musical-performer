@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Clips</h1>
+
+<div class="row row-cols-1 md:row-cols-2 g-4">
+  
+  <% @clips.each do |clip| %>
+  <div class="col">
+    <div class="card">
+    <%= image_tag clip.image, class: "card-img-top", width:"70px", height:"100px" %>
+      <div class="card-body">
+        <h4 class="card-title"><%= clip.title %></h4>
+      <%= link_to "Show this clip", clip %>
+      </div>
+    </div>
+  </div>
+    
+
+  <% end %>
+</div>
+
+<%= link_to "New clip", new_clip_path %>
